@@ -71,8 +71,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # CUSTOM SETTINGS #
 ###################
 
-SECRET_KEY = os.environ.get("SECRET_KEY") or "secret_key"
-DEBUG = True
+SECRET_KEY = os.getenv("SECRET_KEY", "lorem-ipsum")
+DEBUG = os.getenv("DEBUG", "True") in ("True")
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS += [
@@ -85,9 +85,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'PORT': '5432',
-        'NAME':"root",
-        'USER':"root",
-        'PASSWORD':"root",
-        'HOST':"localhost",
+        'NAME': os.getenv("NAME", "root"),
+        'USER': os.getenv("USER", "root"),
+        'PASSWORD': os.getenv("PASSWORD", "root"),
+        'HOST': os.getenv("HOST", "localhost"),
     }
 }
