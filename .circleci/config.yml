@@ -1,0 +1,49 @@
+version: 2.1
+
+jobs:
+  build_and_test:
+    docker:
+      - image: docker:20.10.9
+        environment:
+          DOCKER_COMPOSE_VERSION: 1.29.2
+
+    steps:
+      - checkout
+
+      - setup_remote_docker:
+          version: 20.10.9
+
+      - run:
+          name: Build and Test
+          command: |
+            docker-compose build
+            docker-compose run web python manage.py test
+            docker-compose run client npm test
+
+  deploy:
+    docker:
+      - image: plugins/docker
+        environment:
+          DOCKER_AUTH_CONFIG: $DOCKER_AUTH_CONFIG
+
+    steps:
+      - checkout
+
+      - setup_remote_docker:
+          version: 20.10.9
+
+      - run:
+          name: Deploy to DigitalOcean
+          command: |
+            echo "$DOCKER_AUTH_CONFIG" > ~/.docker/config.json
+            docker-compose pull
+            docker-compose up -d
+
+workflows:
+  version: 2
+  build_test_and_deploy:
+    jobs:
+      - build_and_test
+      - deploy:
+          requires:
+            - build_and_test

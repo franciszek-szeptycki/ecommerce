@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   db:
     image: postgres:latest
@@ -12,7 +13,7 @@ services:
     ports:
       - 5432:5432
 
-  web:
+  server:
     build: ./server
     restart: always
     env_file:
@@ -21,6 +22,16 @@ services:
       - 8000:8000
     depends_on:
       - db
+
+  client:
+    build: ./client
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
+    env_file:
+      - .env
 
 volumes:
   db_data:
