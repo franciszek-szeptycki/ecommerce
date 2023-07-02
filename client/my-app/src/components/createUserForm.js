@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LoginForm from "./loginForm";
 import {
   FaRegEnvelope,
@@ -37,7 +37,7 @@ export default function ContactForm() {
               type="password"
             />
             <button className="form-item" id="btn-form">
-              LOGIN
+              CREATE
             </button>
 
             <Link className="form-text" to="/login">
