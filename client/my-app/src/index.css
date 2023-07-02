@@ -126,7 +126,12 @@ body {
   text-decoration: none;
   list-style-type: none;
 }
-
+.text-error{
+  color: red;
+}
+.text-complite{
+  color: green;
+}
 #btn-google{
   transition: .2s ease-in-out;
 }
