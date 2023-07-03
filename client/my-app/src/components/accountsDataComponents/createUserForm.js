@@ -12,31 +12,19 @@ import { Link, Route, Routes } from "react-router-dom";
 export default function ContactForm() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const [createAccountComplite, setAccountComplite] = useState(null);
-
-  useEffect(() => {
-    if (userName.length < 5 && password.length < 8) {
-      setAccountComplite(false);
-    } else {
-      setAccountComplite(true);
-    }
-  }, [userName, password]);
+  const [newPasswordComplite, setNewPasswordComplite] = useState("Password");
+  const [newUsernameComplite, setNewUsernameComplite] = useState("Username");
 
   const CheckUser = (e) => {
-    e.preventDefault()
-    console.log(userName.length);
-    if (userName.length > 5 && password.length > 8) {
-      console.log("check user info complited");
-      setAccountComplite(false)
-
-    } else {
-      setAccountComplite(true);
-      console.log("check user info is not complited");
-      
+    e.preventDefault();
+    if (password.length > 7) {
+      setNewPasswordComplite("Password is correct");
+    } else if (password.length < 7) {
+      setNewPasswordComplite("Your password is too short");
+    } else if (userName.length < 2) {
+      setNewUsernameComplite("Your name must has be min 2 tags !");
     }
-    console.log(createAccountComplite)
   };
-
   const HandlerValueName = (e) => {
     let newNameValue = e.target.value;
 
@@ -64,14 +52,9 @@ export default function ContactForm() {
             </button>
           </section>
 
-          <div className={`inputs-box`}>
-            <label
-              className={`label-class ${
-                createAccountComplite ? "text-complite" : "text-error"
-              }`}
-              htmlFor="email"
-            >
-              {<FaRegEnvelope />} Username
+          <div className={`inputs-box `}>
+            <label htmlFor="email">
+              {<FaRegEnvelope />} {newUsernameComplite}
             </label>
             <input
               value={userName}
@@ -81,7 +64,9 @@ export default function ContactForm() {
               id="email"
               type="email"
             />
-            <label className={`label-class ${createAccountComplite ? "text-complite" : "text-error"}`} htmlFor="password">{<FaUnlock />} Password</label>
+            <label htmlFor="password">
+              {<FaUnlock />} {newPasswordComplite}
+            </label>
             <input
               className="form-item"
               name="password"
