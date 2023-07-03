@@ -126,6 +126,10 @@ body {
   text-decoration: none;
   list-style-type: none;
 }
+.label-class{
+  color: #fff;
+}
+
 .text-error{
   color: red;
 }

@@ -22,16 +22,19 @@ export default function ContactForm() {
     }
   }, [userName, password]);
 
-  const CheckUser = () => {
+  const CheckUser = (e) => {
+    e.preventDefault()
     console.log(userName.length);
     if (userName.length > 5 && password.length > 8) {
       console.log("check user info complited");
+      setAccountComplite(false)
 
-      setAccountComplite(true);
     } else {
-      setAccountComplite(false);
+      setAccountComplite(true);
       console.log("check user info is not complited");
+      
     }
+    console.log(createAccountComplite)
   };
 
   const HandlerValueName = (e) => {
@@ -62,7 +65,14 @@ export default function ContactForm() {
           </section>
 
           <div className={`inputs-box`}>
-            <label htmlFor="email">{<FaRegEnvelope />} Username</label>
+            <label
+              className={`label-class ${
+                createAccountComplite ? "text-complite" : "text-error"
+              }`}
+              htmlFor="email"
+            >
+              {<FaRegEnvelope />} Username
+            </label>
             <input
               value={userName}
               onChange={(e) => HandlerValueName(e)}
@@ -71,7 +81,7 @@ export default function ContactForm() {
               id="email"
               type="email"
             />
-            <label htmlFor="password">{<FaUnlock />} Password</label>
+            <label className={`label-class ${createAccountComplite ? "text-complite" : "text-error"}`} htmlFor="password">{<FaUnlock />} Password</label>
             <input
               className="form-item"
               name="password"
