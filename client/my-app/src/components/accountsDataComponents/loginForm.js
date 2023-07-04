@@ -18,17 +18,6 @@ export default function LoginForm() {
     console.log(userAccountName);
   };
 
-  const inputsHandler = (event) => {
-    const target = event.target;
-    let newValue = event.target.value;
-
-    if (target.id === "email") {
-      setUserAccountName(newValue);
-    } else if (target.id === "password") {
-      setUserAccountPassword(newValue);
-    }
-  };
-
   return (
     <>
       <div className="form-conatiner">
@@ -48,7 +37,7 @@ export default function LoginForm() {
           <div className="inputs-box">
             <label htmlFor="email">{<FaRegEnvelope />} Username</label>
             <input
-              onChange={(e) => inputsHandler(e)}
+              onChange={(e) => setUserAccountName(e.target.value)}
               className="form-item"
               name="email"
               id="email"
@@ -60,7 +49,7 @@ export default function LoginForm() {
               name="password"
               id="password"
               value={userAccountPassword}
-              onChange={(e) => inputsHandler(e)}
+              onChange={(e) => setUserAccountPassword(e.target.value)}
               type="password"
             />
             <button
