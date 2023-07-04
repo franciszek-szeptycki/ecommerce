@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ContactForm from "./createUserForm.js";
 import {
   FaRegEnvelope,
@@ -9,6 +9,26 @@ import {
 import { Link, Route, Routes } from "react-router-dom";
 
 export default function LoginForm() {
+  const [userAccountName, setUserAccountName] = useState("");
+  const [userAccountPassword, setUserAccountPassword] = useState("");
+
+  const CheckUser = async (e) => {
+    e.preventDefault();
+    console.log(userAccountPassword);
+    console.log(userAccountName);
+  };
+
+  const inputsHandler = (event) => {
+    const target = event.target;
+    let newValue = event.target.value;
+
+    if (target.id === "email") {
+      setUserAccountName(newValue);
+    } else if (target.id === "password") {
+      setUserAccountPassword(newValue);
+    }
+  };
+
   return (
     <>
       <div className="form-conatiner">
@@ -26,16 +46,28 @@ export default function LoginForm() {
           </section>
 
           <div className="inputs-box">
-            <label htmlFor="email">{<FaRegEnvelope />} Email</label>
-            <input className="form-item" name="email" id="email" type="email" />
+            <label htmlFor="email">{<FaRegEnvelope />} Username</label>
+            <input
+              onChange={(e) => inputsHandler(e)}
+              className="form-item"
+              name="email"
+              id="email"
+              value={userAccountName}
+            />
             <label htmlFor="password">{<FaUnlock />} Password</label>
             <input
               className="form-item"
               name="password"
               id="password"
+              value={userAccountPassword}
+              onChange={(e) => inputsHandler(e)}
               type="password"
             />
-            <button className="form-item" id="btn-form">
+            <button
+              onClick={(e) => CheckUser(e)}
+              className="form-item"
+              id="btn-form"
+            >
               LOGIN
             </button>
             <Link className="form-text" to="/contact">

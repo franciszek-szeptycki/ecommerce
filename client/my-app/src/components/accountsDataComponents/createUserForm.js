@@ -15,25 +15,39 @@ export default function ContactForm() {
   const [newPasswordComplite, setNewPasswordComplite] = useState("Password");
   const [newUsernameComplite, setNewUsernameComplite] = useState("Username");
 
-  const CheckUser = (e) => {
-    e.preventDefault();
-    if (password.length > 7) {
-      setNewPasswordComplite("Password is correct");
-    } else if (password.length < 7) {
-      setNewPasswordComplite("Your password is too short");
-    } else if (userName.length < 2) {
-      setNewUsernameComplite("Your name must has be min 2 tags !");
+  const CheckPassword = () => {
+    if (password.length < 8) {
+      setNewPasswordComplite("Password must be has min 8 tags");
+    } else {
+      setNewPasswordComplite("Password");
     }
   };
-  const HandlerValueName = (e) => {
-    let newNameValue = e.target.value;
 
-    setUserName(newNameValue);
+  const CheckName = () => {
+    if (userName.length < 3) {
+      setNewUsernameComplite("Your name must be min 3 tags !!!");
+    } else {
+      setNewUsernameComplite("Username");
+    }
   };
 
-  const HandlerValuePassword = (e) => {
-    let newPasswordValue = e.target.value;
-    setPassword(newPasswordValue);
+  const CheckUser = (e) => {
+    e.preventDefault();
+    console.log(userName);
+    console.log(password);
+    CheckPassword();
+    CheckName();
+  };
+
+  const inputsHandler = (event) => {
+    const target = event.target;
+    let newValue = event.target.value;
+
+    if (target.id === "email") {
+      setUserName(newValue);
+    } else if (target.id === "password") {
+      setPassword(newValue);
+    }
   };
 
   return (
@@ -54,15 +68,15 @@ export default function ContactForm() {
 
           <div className={`inputs-box `}>
             <label htmlFor="email">
-              {<FaRegEnvelope />} {newUsernameComplite}
+              {<FaRegEnvelope />}
+              {newUsernameComplite}
             </label>
             <input
               value={userName}
-              onChange={(e) => HandlerValueName(e)}
+              onChange={(e) => inputsHandler(e)}
               className="form-item"
               name="email"
               id="email"
-              type="email"
             />
             <label htmlFor="password">
               {<FaUnlock />} {newPasswordComplite}
@@ -72,7 +86,7 @@ export default function ContactForm() {
               name="password"
               id="password"
               type="password"
-              onChange={(e) => HandlerValuePassword(e)}
+              onChange={(e) => inputsHandler(e)}
               value={password}
             />
             <button
