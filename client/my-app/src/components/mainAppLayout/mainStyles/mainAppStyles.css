@@ -2,6 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: #171f29;
+    overflow-x: hidden;
 }
 .navigation{
     width: 100%;
@@ -47,6 +48,44 @@ body{
     letter-spacing: 1px;
     margin-right: 3%;
 }
+.drop-menu{
+    transition: .2s ease-in-out;
+    width: 350px;
+    height:89vh;
+    transform: translateX(-100%);
+    background-color: #141b24;
+    position: relative;
+    top: 75px;
+    left: 0px;
+}
+.drop-menu ul li{
+    transition: .2s ease-in-out;
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 100px;
+    text-decoration: none;
+    list-style-type: none;
+    cursor: pointer;
+}
+.drop-menu header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30px;
+}
+.btn-close-menu{
+    transition: .2s ease-in-out;
+    width: 90px;
+    height: 35px;
+    font-size: 15px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: #4FC0D0;
+    border: 0px;
+    color: #fff;
+    letter-spacing: 1px;
+}
 #btn-toggle{
     transition: .2s ease-in-out;
     padding: 10px;
@@ -57,6 +96,11 @@ body{
     margin-right: 3%;
     display: none;
 }
+.btn-close-menu:hover{
+ transition: .2s ease-in-out;
+ background-color: #3AA6B9;
+ transform: scale(1.1,1.1);
+}
 #btn-toggle:hover{
     transition: .2s ease-in-out;
     color: #3AA6B9;
@@ -65,9 +109,18 @@ body{
     transition: .2s ease-in-out;
     color:#3AA6B9 ;
 }
+.drop-menu ul li:hover{
+    transition: .2s ease-in-out;
+    color: #3AA6B9;
+    transform: scale(1.1,1.1);
+}
 .btn-contact-nav:hover{
     transition: .2s ease-in-out;
     background-color: #3AA6B9;
+}
+.active-menu{
+    transition: .2s ease-in-out;
+    transform: translateX(0%);
 }
 @media screen and (max-width: 760px){
     .btn-contact-nav{
@@ -79,4 +132,5 @@ body{
     #btn-toggle{
         display: block;
     }
+    
 }
