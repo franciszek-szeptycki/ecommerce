@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: #1B2430;
+    background-color: #171f29;
 }
 .navigation{
     width: 100%;
@@ -10,7 +10,7 @@ body{
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    background-color: #161c27;
+    background-color: #141b24;
     position: fixed;
     top: 0px;
     left: 0px;

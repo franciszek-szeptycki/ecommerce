@@ -13,7 +13,7 @@ body {
 
 
 .form-conatiner{
-  background-color: #1B2430;
+  background-color: #171f29;
   position: fixed;
   top: 0;
   left: 0;
@@ -28,7 +28,7 @@ body {
   max-width: 400px;
   min-width: 35%;
   height: 530px;
-  background-color: #222d3b;
+  background-color: #1B2430;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
