@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-import { FaBars, FaTimes } from "react-icons/fa";
+import {
+  FaBars,
+  FaRegLightbulb,
+  FaUserCircle,
+  FaRegEdit,
+} from "react-icons/fa";
 
 export default function NavBar() {
   const [menuHandler, setmenuHandler] = useState(false);
@@ -11,9 +16,9 @@ export default function NavBar() {
         <h3>ECOMMERCE</h3>
 
         <ul>
-          <li>About</li>
-          <li>Colaboration</li>
-          <li>Help</li>
+          <li>{<FaUserCircle />}   About</li>
+          <li>{<FaRegEdit />}   Colaboration</li>
+          <li>{<FaRegLightbulb />}   Help</li>
         </ul>
 
         <button className="btn-contact-nav">Contact</button>
@@ -27,9 +32,9 @@ export default function NavBar() {
           <button className="btn-close-menu">Contact</button>
         </header>
         <ul>
-          <li>About</li>
-          <li>Colaboration</li>
-          <li>Help</li>
+          <li>{<FaUserCircle />} About</li>
+          <li>{<FaRegEdit />} Colaboration</li>
+          <li>{<FaRegLightbulb />} Help</li>
         </ul>
       </div>
     </>
