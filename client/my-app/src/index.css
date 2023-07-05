@@ -136,8 +136,15 @@ body {
 .text-complite{
   color: green;
 }
+
+
 #btn-google{
   transition: .2s ease-in-out;
+}
+#btn-toggle-effect:hover{
+  transition: .2s ease-in-out;
+  color: goldenrod;
+  border-color: goldenrod;
 }
 .inputs-box label:hover{
   transition: .2s ease-in-out;

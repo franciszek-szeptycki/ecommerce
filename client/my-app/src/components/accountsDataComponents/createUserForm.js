@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import AppLayout from "../mainAppLayout/appLayout";
 import LoginForm from "./loginForm";
-import { auth } from "../privateRouts";
+
+import { auth } from "../privateRoutes.js";
 import {
   FaRegEnvelope,
   FaUnlock,
@@ -9,19 +9,18 @@ import {
   FaGoogle,
 } from "react-icons/fa";
 
-import { Link,  Route, Routes,  useNavigate,  } from "react-router-dom";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 export default function ContactForm() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate()
-  
 
- 
+  const navigate = useNavigate();
+
   const createNewAccount = () => {
-    auth.token = true
-   navigate("/appLayout");
-  }
+    auth.token = true;
+    navigate("/appLayout");
+  };
 
   const CheckUser = (e) => {
     e.preventDefault();

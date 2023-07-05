@@ -1,7 +1,7 @@
 import React from "react";
 import LoginForm from "./components/accountsDataComponents/loginForm";
 import ContactForm from "./components/accountsDataComponents/createUserForm";
-import PrivateRouts from "./components/privateRouts";
+import PrivateRouts from "./components/privateRoutes";
 import AppLayout from "./components/mainAppLayout/appLayout";
 
 import { Link, Route, Routes } from "react-router-dom";
