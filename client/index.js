@@ -5,9 +5,6 @@ const app = express()
 const proxy = httpProxy.createProxyServer()
 
 const { CLIENT_PORT, SERVER_PORT, SERVER_CONTAINER_NAME } = process.env
-// const CLIENT_PORT = 3000
-// const SERVER_PORT = 8000
-// const SERVER_CONTAINER_NAME = 'server'
 const STATIC_DIR = 'public'
 
 PROXY_CONFIG = {
