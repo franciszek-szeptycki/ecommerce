@@ -1,17 +1,13 @@
 version: '3'
 
 services:
-  db:
-    image: postgres:latest
+  client:
+    build: ./client
     restart: always
-    environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root
-    volumes:
-      - db_data:/var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - 3000:3000
+    depends_on:
+      - server
 
   server:
     build: ./server
@@ -23,15 +19,17 @@ services:
     depends_on:
       - db
 
-  client:
-    build: ./client/proxy
+  db:
+    image: postgres:latest
     restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=root
+    volumes:
+      - db_data:/var/lib/postgresql/data
     ports:
-      - 3000:3000
-    depends_on:
-      - server
-    env_file:
-      - .env
+      - 5432:5432
 
 volumes:
   db_data:

@@ -1,3 +1,0 @@
-FRANEK:
-docker-compose zaciąganie portów i danych do db z .env
-bardziej profesjonalne ci/cd
