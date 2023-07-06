@@ -5,13 +5,20 @@ const path = require('path')
 const app = express()
 const proxy = httpProxy.createProxyServer()
 
-const STATIC_DIR = 'public'
+const PUBLIC_DIR = 'public'
+const ASSETS_DIR = 'assets'
 const PORT = 3000
 const SERVER_PORT = 8000
 const SERVER_HOST = 'server'
 const PROXY = { target: `http://${SERVER_HOST}:${SERVER_PORT}` }
 
-app.use(express.static(path.join(__dirname, STATIC_DIR)))
+// Dodaj nagłówki do obsługi typów MIME
+app.use((req, res, next) => {
+    res.set('X-Content-Type-Options', 'nosniff')
+    next()
+})
+
+app.use(express.static(path.join(__dirname, PUBLIC_DIR)))
 
 app.all('/api/*', (req, res) => {
     proxy.web(req, res, PROXY)
@@ -22,7 +29,7 @@ app.all('/auth/*', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, STATIC_DIR, 'index.html'))
+    res.sendFile(path.join(__dirname, PUBLIC_DIR, 'index.html'))
 })
 
 app.listen(PORT, () => {
