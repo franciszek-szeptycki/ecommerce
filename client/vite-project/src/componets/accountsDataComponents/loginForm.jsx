@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ContactForm from "./createUserForm.jsx";
+import CreateUserAccountForm from "./createUserForm";
+import "./styles/loginForm.css";
 import {
-
   FaRegEnvelope,
   FaUnlock,
   FaFacebookSquare,
@@ -28,25 +28,25 @@ export default function LoginForm() {
           </header>
           <section className="media-form">
             <button id="btn-facebook">
-              <b>{<FaFacebookSquare/>}</b>
-               Facebook
+              <b>{<FaFacebookSquare />}</b>
+              Facebook
             </button>
             <button id="btn-google">
-              <b>{<FaGoogle/>}</b>
+              <b>{<FaGoogle />}</b>
               Google
             </button>
           </section>
 
           <div className="inputs-box">
-            <label htmlFor="email">{<FaRegEnvelope/>} Username</label>
+            <label htmlFor="name">{<FaRegEnvelope />} Username</label>
             <input
               onChange={(e) => setUserAccountName(e.target.value)}
               className="form-item"
-              name="email"
-              id="email"
+              name="name"
+              id="name"
               value={userAccountName}
             />
-            <label htmlFor="password">{<FaUnlock/>} Password</label>
+            <label htmlFor="password">{<FaUnlock />} Password</label>
             <input
               className="form-item"
               name="password"
@@ -62,18 +62,15 @@ export default function LoginForm() {
             >
               LOGIN
             </button>
-            <Link className="form-text" to="/contact">
+            <Link className="form-text" to="/register">
               <p className="form-text">Create account</p>
             </Link>
           </div>
         </form>
       </div>
       <Routes>
-        <Route path="/contact" element={<ContactForm />}></Route>
+        <Route path="/register" element={<CreateUserAccountForm />}></Route>
       </Routes>
     </>
   );
 }
-
-// <b>{<FaFacebookSquare fontSize={16} />}</b>
-//

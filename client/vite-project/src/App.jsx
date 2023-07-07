@@ -1,6 +1,6 @@
 import React from "react";
 import LoginForm from "./componets/accountsDataComponents/loginForm";
-import ContactForm from "./componets/accountsDataComponents/createUserForm";
+import CreateUserAccountForm from "./componets/accountsDataComponents/createUserForm";
 import PrivateRouts from "./componets/privateRoutes";
 import AppLayout from "./componets/mainAppLayout/appLayout";
 
@@ -15,7 +15,7 @@ function App() {
         <Route element={<PrivateRouts />}>
           <Route path="/appLayout" element={<AppLayout />} />
         </Route>
-        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/register" element={<CreateUserAccountForm />} />
         <Route path="/login" element={<LoginForm />} />
       
      </Routes>

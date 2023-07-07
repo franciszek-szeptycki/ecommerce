@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import LoginForm from "./loginForm";
-
+import "./styles/createForm.css";
 import { auth } from "../privateRoutes.jsx";
 import {
   FaRegEnvelope,
   FaUnlock,
   FaFacebookSquare,
   FaGoogle,
+  FaUserCircle,
 } from "react-icons/fa";
 
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
-export default function ContactForm() {
+export default function CreateUserAccountForm() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   const navigate = useNavigate();
 
@@ -25,46 +27,54 @@ export default function ContactForm() {
   const CheckUser = (e) => {
     e.preventDefault();
 
-    if (userName.length > 2 && password.length > 7) {
+    if (userName.length > 2 && password.length > 7 && email.length > 4) {
       createNewAccount();
     } else {
-      alert("Your name or password is to short !");
+      alert("Your name, password or email is to short !");
     }
   };
 
   return (
     <>
       <div className="form-conatiner">
-        <form className="form-box">
+        <form className="form-box-create">
           <header>
             <h2>Create account</h2>
           </header>
           <section className="media-form">
             <button id="btn-facebook">
-              <b>{<FaFacebookSquare fontSize={16}/>}</b>
-
-
+              <b>{<FaFacebookSquare fontSize={16} />}</b>
               Facebook
             </button>
             <button id="btn-google">
-              <b>{<FaGoogle fontSize={16}/>}</b>
-               Google
+              <b>{<FaGoogle fontSize={16} />}</b>
+              Google
             </button>
           </section>
 
           <div className={`inputs-box `}>
-            <label htmlFor="email">
-              {<FaRegEnvelope/>}
+            <label htmlFor="name">
+              {<FaUserCircle />}
               Username
             </label>
             <input
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               className="form-item"
-              name="email"
-              id="email"
+              name="name"
+              id="name"
             />
-            <label htmlFor="password">{<FaUnlock/>} Password</label>
+            <label htmlFor="email">{<FaRegEnvelope />} Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="form-item"
+              placeholder="example@gmail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <label htmlFor="password">{<FaUnlock />} Password</label>
             <input
               className="form-item"
               name="password"
