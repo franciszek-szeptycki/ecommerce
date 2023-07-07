@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: #F1F6F9;
+    background: #EEEEEE;
     overflow-x: hidden;
 }
 .navigation{
@@ -56,7 +56,7 @@ body{
     width: 350px;
     height:89vh;
     transform: translateX(-100%);
-    background-color: #141b24;
+    background-color: #fff;
     position: relative;
     top: 75px;
     left: 0px;
@@ -65,7 +65,7 @@ body{
     width: 150px;
     
     transition: .2s ease-in-out;
-    color: #fff;
+    color: black;
     letter-spacing: 1px;
     margin: 100px;
     text-decoration: none;
@@ -87,16 +87,17 @@ body{
     padding: 4px;
     border-radius: 10px;
     background-color: transparent;
-    border: 3px solid #3AA6B9;
+    border: 0px;
     border-radius: 12px;
     color: #fff;
+    background-color: black;
     letter-spacing: 1px;
 }
 #btn-toggle{
     transition: .2s ease-in-out;
     padding: 10px;
     background: transparent;
-    color: #fff;
+    color: black;
     font-size: 26px;
     border: 0px;
     margin-right: 3%;
