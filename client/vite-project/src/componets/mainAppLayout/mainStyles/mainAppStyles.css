@@ -49,8 +49,21 @@ body{
     border-radius: 12px;
     color: #fff;
     letter-spacing: 1px;
-    margin-right: 3%;
+    margin-right: 0%;
 }
+#options-list{
+
+    position: relative;
+    top: 0px;
+}
+#options-list li{
+    font-size: 20px;
+}
+#options-list li:hover{
+    transition: .2s ease-in-out;
+    
+}
+
 .drop-menu{
     transition: .2s ease-in-out;
     width: 350px;
@@ -61,6 +74,7 @@ body{
     top: 75px;
     left: 0px;
 }
+
 .drop-menu ul li{
     width: 150px;
     

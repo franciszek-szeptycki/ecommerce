@@ -5,6 +5,7 @@ import {
   FaRegLightbulb,
   FaUserCircle,
   FaRegEdit,
+  FaShoppingCart
 } from "react-icons/fa";
 
 export default function NavBar() {
@@ -22,6 +23,14 @@ export default function NavBar() {
         </ul>
 
         <button className="btn-contact-nav">Contact</button>
+        <div className="wrapper-options">
+        <ul id="options-list">
+          <li>{<FaUserCircle/>}</li>
+          <li>{<FaShoppingCart/>}</li>
+        </ul>
+      
+        </div>
+       
 
         <button onClick={() => setmenuHandler(!menuHandler)} id="btn-toggle">
           {<FaBars />}
@@ -37,6 +46,7 @@ export default function NavBar() {
           <li>{<FaRegLightbulb />} Help</li>
         </ul>
       </div>
+     
     </>
   );
 }
