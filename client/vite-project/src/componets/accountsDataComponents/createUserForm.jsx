@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LoginForm from "./loginForm";
 import "./styles/createForm.css";
-import { auth } from "../privateRoutes.jsx";
+
 import {
   FaRegEnvelope,
   FaUnlock,
@@ -21,7 +21,7 @@ export default function CreateUserAccountForm() {
 
   
   const createNewAccount = () => {
-    auth.token = true;
+    
     navigate("/appLayout");
   };
 
