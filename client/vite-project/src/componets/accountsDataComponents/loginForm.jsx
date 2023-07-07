@@ -24,7 +24,7 @@ export default function LoginForm() {
       <div className="form-conatiner">
         <form className="form-box">
           <header>
-            <h2>Sign In With</h2>
+            <h2>Sign In </h2>
           </header>
           <section className="media-form">
             <button id="btn-facebook">
