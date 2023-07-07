@@ -13,7 +13,7 @@ body {
   
   
   .form-conatiner{
-    background-color: #171f29;
+    background-color: #EEEEEE;
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@ body {
     max-width: 400px;
     min-width: 35%;
     height: 530px;
-    background-color: #1B2430;
+    background-color: #fff;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -48,7 +48,7 @@ body {
     letter-spacing: 2px ;
     font-size: 26px;
     font-weight: 700;
-    color: #fff;
+    color: black;
   }
   .media-form{
     padding: 25px 35%;
@@ -68,6 +68,7 @@ body {
     border: 0px;
     font-weight: 600;
     letter-spacing: 1px;
+    color: black;
     
     
   }
@@ -96,7 +97,7 @@ body {
   .inputs-box input{
    width: 310px;
    margin: 10px;
-   background-color:   #ffffff35;
+   background-color:   #F5F5F5;
    border: 0px;
    border-radius: 5px;
    padding: 17px 15px;
@@ -109,13 +110,13 @@ body {
   .inputs-box label{
     font-size: 14px;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
   }
   .inputs-box button{
     transition: .2s ease-in-out;
     padding: 17px 15px;
     letter-spacing: 1px;
-    background-color: #1B2430;
+    background-color: black;
     color: #fff;
     border: 0px;
     border-radius: 10px;
@@ -128,7 +129,7 @@ body {
     transition: .2s ease-in-out;
     text-align: center;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
     cursor:pointer;
     text-decoration: none;
     list-style-type: none;
@@ -147,6 +148,8 @@ body {
   
   #btn-google{
     transition: .2s ease-in-out;
+    background-color: black;
+    color: #fff;
   }
   .form-text:hover{
     transition: .2s ease-in-out;
@@ -175,7 +178,7 @@ body {
   }
   #btn-google:hover{
     transition: .2s ease-in-out;
-    background-color: black;
+    background-color: #E84545;
     color: #fff;
   }
   #form-text:hover{

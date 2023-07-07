@@ -19,6 +19,7 @@ export default function CreateUserAccountForm() {
 
   const navigate = useNavigate();
 
+  
   const createNewAccount = () => {
     auth.token = true;
     navigate("/appLayout");

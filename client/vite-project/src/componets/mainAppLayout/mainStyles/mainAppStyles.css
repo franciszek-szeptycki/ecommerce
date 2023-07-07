@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background-color: #171f29;
+    background: #F1F6F9;
     overflow-x: hidden;
 }
 .navigation{
@@ -11,7 +11,7 @@ body{
     margin: 0 auto;
     align-items: center;
     justify-content: space-between;
-    background-color: #141b24;
+    background-color: #fff;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -24,13 +24,13 @@ body{
     transition: .2s ease-in-out;
     cursor: pointer;
     margin: 20px;
-    color: #DDDDDD;
+    color: black;
     text-decoration: none;
     list-style-type: none;
     letter-spacing: 1px;
 }
 .navigation h3{
-    color: #fff;
+    color: black;
     font-weight: 700;
     letter-spacing: 1px;
     margin-left: 3%;
@@ -41,10 +41,11 @@ body{
     width: 90px;
     height: 35px;
     font-size: 15px;
+    font-weight: 600;
     padding: 4px;
     border-radius: 10px;
-    background: transparent;
-    border: 3px solid #3AA6B9;
+    background: black;
+    border: 0px;
     border-radius: 12px;
     color: #fff;
     letter-spacing: 1px;
