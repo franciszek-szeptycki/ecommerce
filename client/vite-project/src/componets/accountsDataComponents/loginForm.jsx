@@ -22,7 +22,7 @@ export default function LoginForm() {
   return (
     <>
       <div className="form-conatiner">
-        <form className="form-box">
+        <form className="form-box" onSubmit={CheckUser}>
           <header>
             <h2>Sign In </h2>
           </header>

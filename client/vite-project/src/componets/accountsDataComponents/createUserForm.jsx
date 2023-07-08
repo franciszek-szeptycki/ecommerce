@@ -38,7 +38,7 @@ export default function CreateUserAccountForm() {
   return (
     <>
       <div className="form-conatiner">
-        <form className="form-box-create">
+        <form className="form-box-create" onSubmit={CheckUser}>
           <header>
             <h2>Create account</h2>
           </header>
