@@ -7,6 +7,9 @@ services:
       - 80:80
     depends_on:
       - server
+    volumes:
+      - media:/usr/share/nginx/html/media
+      - static:/usr/share/nginx/html/static
 
   server:
     build: ./server
@@ -17,6 +20,9 @@ services:
       - 8000:8000
     depends_on:
       - db
+    volumes:
+      - static:/core/static
+      - media:/core/media
 
   db:
     image: postgres:latest
@@ -32,3 +38,5 @@ services:
 
 volumes:
   db_data:
+  static:
+  media:
