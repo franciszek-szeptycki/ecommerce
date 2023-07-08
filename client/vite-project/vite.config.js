@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+const SERVER_URL = 'http://104.248.130.4:8000'
+
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],
@@ -13,11 +15,11 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: 'http://127.0.0.1:8000',
+                target: SERVER_URL,
                 // changeOrigin: true,
             },
             '/auth': {
-                target: 'http://127.0.0.1:8000',
+                target: SERVER_URL,
                 // changeOrigin: true,
             },
         },
