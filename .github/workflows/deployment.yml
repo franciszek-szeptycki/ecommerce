@@ -19,3 +19,4 @@ jobs:
             docker-compose down
             git pull --force 
             docker-compose up -d --build
+            docker-compose up -d --build
