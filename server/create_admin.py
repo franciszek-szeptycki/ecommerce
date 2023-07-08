@@ -2,7 +2,7 @@ import os
 import django
 
 # Ustawienia środowiska Django
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "nazwa_projektu.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "app.settings")
 django.setup()
 
 from django.contrib.auth.models import User
