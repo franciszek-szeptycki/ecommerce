@@ -7,7 +7,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt-get install -y nodejs
 
 WORKDIR /usr/share/nginx/html
-COPY . .
 
+COPY . .
 RUN cd vite-project && npm install && npm run build
 RUN rm -rf vite-project

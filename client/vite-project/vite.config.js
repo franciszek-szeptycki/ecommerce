@@ -11,7 +11,7 @@ export default defineConfig({
     plugins: [react()],
 
     build: {
-        outDir: '../proxy/public',
+        outDir: '../dist',
         emptyOutDir: true,
     },
 

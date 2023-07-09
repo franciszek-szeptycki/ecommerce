@@ -63,8 +63,6 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = "static/"
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 ###################
@@ -79,16 +77,22 @@ INSTALLED_APPS += [
     'rest_framework.authtoken',
     "rest_framework",
     "accounts",
+    'store'
 ]
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'PORT': '5432',
-        'NAME': os.getenv("NAME", "root"),
-        'USER': os.getenv("USER", "root"),
-        # 'USER': 'root',
-        'PASSWORD': os.getenv("PASSWORD", "root"),
+        'NAME': "root",
+        'USER': "root",
+        'PASSWORD': "root",
         'HOST': os.getenv("HOST", "localhost"),
     }
 }
+
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
