@@ -6,7 +6,11 @@ import "./mainStyles/mainAppStyles.css";
 export default function AppLayout() {
 
   window.onload = () => {
-    //axios.get('')
+    // Start test axios systems 
+    axios.get('https://todo-app-navroo.vercel.app/todo').then(res => {
+      console.log(res.data)
+    })
+    //End test axios systems 
   }
   return (
     <>
