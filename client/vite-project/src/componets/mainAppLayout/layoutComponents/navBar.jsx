@@ -18,6 +18,8 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
+import { auth } from "../../securityPage/PrivateRoutes";
+
 //Router import
 
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
@@ -25,6 +27,18 @@ import { Link, Route, Routes, useNavigate } from "react-router-dom";
 export default function NavBar() {
   const [menuHandler, setmenuHandler] = useState(false);
   const [modalState, setModalState] = useState(false);
+
+  const navigate = useNavigate();
+
+  const CheckTokenUser = () => {
+    const item = localStorage.getItem("token orders");
+
+    if (item === "true") {
+      navigate("/orders");
+    } else {
+      setModalState(true);
+    }
+  };
 
   return (
     <>
@@ -46,7 +60,9 @@ export default function NavBar() {
             >
               {<FaUserCircle />}
             </li>
-            <li className="options-list-item">{<FaShoppingCart />}</li>
+            <li className="options-list-item" onClick={() => CheckTokenUser()}>
+              {<FaShoppingCart />}
+            </li>
           </ul>
         </div>
 
