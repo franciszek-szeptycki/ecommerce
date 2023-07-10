@@ -152,7 +152,7 @@ body{
 .drop-menu{
     transition: .2s ease-in-out;
     width: 350px;
-    height:90vh;
+    height:100vh;
     transform: translateX(-100%);
     background-color: #fff;
     position: relative;

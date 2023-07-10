@@ -80,7 +80,7 @@ export default function NavBar() {
           <li className="options-list-item" onClick={() => setModalState(true)}>
             {<FaUserCircle />} Account
           </li>
-          <li className="options-list-item">{<FaShoppingCart />} My orders</li>
+          <li onClick={() => CheckTokenUser()} className="options-list-item">{<FaShoppingCart />} My orders</li>
         </ul>
       </div>
 
