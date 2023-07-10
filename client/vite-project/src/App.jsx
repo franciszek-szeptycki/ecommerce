@@ -13,8 +13,8 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<AppLayout />} />
-        <Route element={<PrivateRoutes/>}>
-          <Route path="/orders" element={<OrderUser/>}/>
+        <Route element={<PrivateRoutes />}>
+          <Route path="/orders" element={<OrderUser />} />
         </Route>
         <Route path="/appLayout" element={<AppLayout />} />
         <Route path="/register" element={<CreateUserAccountForm />} />

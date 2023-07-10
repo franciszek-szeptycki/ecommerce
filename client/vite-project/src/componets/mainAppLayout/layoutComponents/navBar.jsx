@@ -18,10 +18,8 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
-import { auth } from "../../securityPage/PrivateRoutes";
-
 //Router import
-
+import { auth } from "../../securityPage/PrivateRoutes";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 
 export default function NavBar() {
@@ -32,9 +30,10 @@ export default function NavBar() {
 
   const CheckTokenUser = () => {
     const item = localStorage.getItem("token orders");
-
+    console.log(item);
     if (item === "true") {
       navigate("/orders");
+      auth.token = true;
     } else {
       setModalState(true);
     }
