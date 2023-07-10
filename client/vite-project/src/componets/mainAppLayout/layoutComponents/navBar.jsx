@@ -4,27 +4,22 @@ import React, { useState } from "react";
 import LoginForm from "../../accountsDataComponents/loginForm";
 import CreateUserAccountForm from "../../accountsDataComponents/createUserForm";
 
-//Image icons import
-import Icon from "./images/user.png";
-
-//Icons import
+//Tools import
 import {
   FaBars,
   FaRegLightbulb,
   FaUserCircle,
   FaRegEdit,
   FaShoppingCart,
-  FaCheckCircle,
-  FaTimes,
 } from "react-icons/fa";
 
-//Router import
 import { auth } from "../../securityPage/PrivateRoutes";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 
-export default function NavBar() {
+export default function NavBar(props) {
   const [menuHandler, setmenuHandler] = useState(false);
-  const [modalState, setModalState] = useState(false);
+
+  console.log();
 
   const navigate = useNavigate();
 
@@ -35,7 +30,7 @@ export default function NavBar() {
       navigate("/orders");
       auth.token = true;
     } else {
-      setModalState(true);
+      props.setModalOptionsAccount(true);
     }
   };
 
@@ -55,7 +50,7 @@ export default function NavBar() {
           <ul id="options-list">
             <li
               className="options-list-item"
-              onClick={() => setModalState(true)}
+              onClick={() => props.setModalOptionsAccount(true)}
             >
               {<FaUserCircle />}
             </li>
@@ -77,41 +72,16 @@ export default function NavBar() {
           <li>{<FaUserCircle />} About</li>
           <li>{<FaRegEdit />} Colaboration</li>
           <li>{<FaRegLightbulb />} Help</li>
-          <li className="options-list-item" onClick={() => setModalState(true)}>
+          <li
+            className="options-list-item"
+            onClick={() => props.setModalOptionsAccount(true)}
+          >
             {<FaUserCircle />} Account
           </li>
-          <li onClick={() => CheckTokenUser()} className="options-list-item">{<FaShoppingCart />} My orders</li>
+          <li onClick={() => CheckTokenUser()} className="options-list-item">
+            {<FaShoppingCart />} My orders
+          </li>
         </ul>
-      </div>
-
-      <div
-        className={`modal-main-container ${modalState ? "active-modal" : ""} `}
-      >
-        <div className="modal-container">
-          <header>
-            <img src={Icon} alt="" />
-            <button
-              className="btn-hidden-modal"
-              onClick={() => setModalState(false)}
-            >
-              {<FaTimes />}
-            </button>
-          </header>
-          <section className="modal-text-descryption-container">
-            <p>
-              Hi, there! you can choose whether you want to log in or create an
-              account or not
-            </p>
-          </section>
-          <section className="options-container-modal">
-            <Link to="/login">
-              <button>Login {<FaCheckCircle />}</button>
-            </Link>
-            <Link to="/register">
-              <button>Register {<FaCheckCircle />}</button>
-            </Link>
-          </section>
-        </div>
       </div>
 
       <Routes>
