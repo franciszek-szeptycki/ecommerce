@@ -14,11 +14,9 @@ export default function AppLayout() {
   const [modalStateOptionsAccount, setModalStateOptionsAccount] = useState(false)
  
   window.onload = () => {
-    // Start test axios systems 
-    axios.get('https://todo-app-navroo.vercel.app/todo').then(res => {
-      console.log(res.data)
-    })
-    //End test axios systems 
+ 
+   axios.get("/auth/login").then((res) => {console.log(res)})
+
   }
   return (
     <>

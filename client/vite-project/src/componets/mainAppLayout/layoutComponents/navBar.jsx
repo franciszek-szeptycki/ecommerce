@@ -13,7 +13,6 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 
-import { auth } from "../../securityPage/PrivateRoutes";
 import { Route, Routes, useNavigate, Link } from "react-router-dom";
 
 export default function NavBar(props) {
@@ -24,14 +23,7 @@ export default function NavBar(props) {
   const navigate = useNavigate();
 
   const CheckTokenUser = () => {
-    const item = localStorage.getItem("token orders");
-    console.log(item);
-    if (item === "true") {
-      navigate("/orders");
-      auth.token = true;
-    } else {
-      props.setModalOptionsAccount(true);
-    }
+    navigate("/orders");
   };
 
   return (
@@ -41,7 +33,7 @@ export default function NavBar(props) {
 
         <ul>
           <Link className="router-link" to="/about">
-          <li>{<FaUserCircle />} About</li>
+            <li>{<FaUserCircle />} About</li>
           </Link>
           <li>{<FaRegEdit />} Colaboration</li>
           <li>{<FaRegLightbulb />} Help</li>

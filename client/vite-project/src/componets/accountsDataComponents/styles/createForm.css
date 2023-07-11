@@ -27,7 +27,7 @@ body {
   margin:  3% auto 15% auto;
   max-width: 400px;
   min-width: 35%;
-  height: 580px;
+  padding: 20px;
   background-color: #fff;
   border-radius: 10px;
   margin-left: auto;

@@ -19,9 +19,7 @@ export default function OrderUser() {
           </header>
           <section id="info-container">
             <div className="info-container-item">
-              <h2 className="wrapper-info-item">
-                {localStorage.getItem("User name")}
-              </h2>
+              <h2 className="wrapper-info-item">basket</h2>
               <button className="wrapper-info-item">Buy</button>
             </div>
             <div className="info-container-item">

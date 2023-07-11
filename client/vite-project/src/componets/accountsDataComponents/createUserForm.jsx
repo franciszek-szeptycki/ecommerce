@@ -1,8 +1,8 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 
 import LoginForm from "./loginForm";
 import "./styles/createForm.css";
-import { auth } from "../securityPage/PrivateRoutes";
+
 import {
   FaRegEnvelope,
   FaUnlock,
@@ -20,14 +20,10 @@ export default function CreateUserAccountForm() {
 
   const navigate = useNavigate();
 
- 
-  
   const createNewAccount = () => {
-    
     navigate("/appLayout");
-    auth.token = true
-    localStorage.setItem("token orders", JSON.stringify(auth.token))
-    localStorage.setItem("User name", `${userName}`)
+
+    localStorage.setItem("User name", `${userName}`);
   };
 
   const CheckUser = (e) => {
