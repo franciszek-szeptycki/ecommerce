@@ -27,6 +27,7 @@
 }
 .orders-wrapper header p{
     margin: 5px;
+    font-size: 13px;
     position: relative;
     top: 22px;
     letter-spacing: 1px;

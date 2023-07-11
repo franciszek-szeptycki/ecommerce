@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 
 import { auth } from "../../securityPage/PrivateRoutes";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate, Link } from "react-router-dom";
 
 export default function NavBar(props) {
   const [menuHandler, setmenuHandler] = useState(false);
@@ -40,7 +40,9 @@ export default function NavBar(props) {
         <h3>ECOMMERCE</h3>
 
         <ul>
+          <Link className="router-link" to="/about">
           <li>{<FaUserCircle />} About</li>
+          </Link>
           <li>{<FaRegEdit />} Colaboration</li>
           <li>{<FaRegLightbulb />} Help</li>
         </ul>

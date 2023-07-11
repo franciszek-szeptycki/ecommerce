@@ -2,7 +2,7 @@ body{
     margin: 0px;
     padding: 0px;
     background: #EEEEEE;
-    overflow: hidden;
+  
 }
 .navigation{
     width: 100%;
@@ -30,6 +30,10 @@ body{
     text-decoration: none;
     list-style-type: none;
     letter-spacing: 1px;
+    text-decoration: none;
+}
+.router-link{
+    text-decoration: none;
 }
 .navigation h3{
     color: black;
