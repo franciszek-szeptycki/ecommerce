@@ -9,5 +9,6 @@ RUN apt-get install -y nodejs
 WORKDIR /usr/share/nginx/html
 
 COPY . .
-RUN cd vite-project && npm install && npm run build
+RUN cd vite-project && npm install
+RUN cd vite-project && npm run build
 RUN rm -rf vite-project
