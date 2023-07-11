@@ -20,13 +20,14 @@ export default function CreateUserAccountForm() {
 
   const navigate = useNavigate();
 
- console.log(localStorage.getItem('token orders'))
+ 
   
   const createNewAccount = () => {
     
     navigate("/appLayout");
     auth.token = true
     localStorage.setItem("token orders", JSON.stringify(auth.token))
+    localStorage.setItem("User name", `${userName}`)
   };
 
   const CheckUser = (e) => {
