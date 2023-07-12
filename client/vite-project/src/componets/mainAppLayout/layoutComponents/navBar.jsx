@@ -34,10 +34,10 @@ export default function NavBar(props) {
 
         <ul>
           <Link className="router-link" to="/about">
-            <li>{<FaUserCircle />} About</li>
+            <li>{<FaUserCircle />} <b>About</b></li>
           </Link>
-          <li>{<FaInstagram />} Find us</li>
-          <li>{<FaRegLightbulb />} Help</li>
+          <li>{<FaInstagram />} <b>Find us</b></li>
+          <li>{<FaRegLightbulb />} <b>Help</b></li>
         </ul>
 
         <button className="btn-contact-nav">Contact</button>
@@ -65,10 +65,10 @@ export default function NavBar(props) {
         </header>
         <ul>
           <Link className="router-link" to="/about">
-          <li>{<FaUserCircle />} About</li>
+          <li>{<FaUserCircle />} <b>About</b></li>
           </Link>
-          <li>{<FaInstagram />} Find us</li>
-          <li>{<FaRegLightbulb />} Help</li>
+          <li>{<FaInstagram />} <b>find us</b></li>
+          <li>{<FaRegLightbulb />} <b>Help</b></li>
           <li
             className="options-list-item"
             onClick={() => props.setModalOptionsAccount(true)}
