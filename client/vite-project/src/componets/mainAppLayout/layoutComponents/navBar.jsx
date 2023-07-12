@@ -9,8 +9,9 @@ import {
   FaBars,
   FaRegLightbulb,
   FaUserCircle,
-  FaRegEdit,
+  
   FaShoppingCart,
+  FaInstagram
 } from "react-icons/fa";
 
 import { Route, Routes, useNavigate, Link } from "react-router-dom";
@@ -35,7 +36,7 @@ export default function NavBar(props) {
           <Link className="router-link" to="/about">
             <li>{<FaUserCircle />} About</li>
           </Link>
-          <li>{<FaRegEdit />} Colaboration</li>
+          <li>{<FaInstagram />} Find us</li>
           <li>{<FaRegLightbulb />} Help</li>
         </ul>
 
@@ -63,8 +64,10 @@ export default function NavBar(props) {
           <button className="btn-close-menu">Contact</button>
         </header>
         <ul>
+          <Link className="router-link" to="/about">
           <li>{<FaUserCircle />} About</li>
-          <li>{<FaRegEdit />} Colaboration</li>
+          </Link>
+          <li>{<FaInstagram />} Find us</li>
           <li>{<FaRegLightbulb />} Help</li>
           <li
             className="options-list-item"
