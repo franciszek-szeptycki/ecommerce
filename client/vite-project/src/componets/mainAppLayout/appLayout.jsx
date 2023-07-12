@@ -13,7 +13,7 @@ export default function AppLayout() {
 
   const [modalStateOptionsAccount, setModalStateOptionsAccount] = useState(false)
  
-  axios.get('/auth/login').then((res) => {console.log(res)})
+  axios.get('/auth/login/').then((res) => {console.log(res)})
   
   return (
     <>
