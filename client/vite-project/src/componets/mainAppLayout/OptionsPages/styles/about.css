@@ -1,137 +1,133 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
-header{
-    width: 100%;
-    text-align: center;
-    font-weight: bolder;
-    text-transform: uppercase;
-    
-   
-    text-shadow: 4px 2px 100px rgba(66, 68, 90, 1);
-    letter-spacing: 1px;
-    font-size: 35px;
-}
-.main-conatiner{
-    position: relative;
-    top: 100px;
-    padding: 5px  7%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 640px));
-    justify-content: center;
-  
-}
-.main-conatiner section{
-    padding: 50px 10px;
-    
-    border-radius: 10px;
+header {
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+  text-transform: uppercase;
 
-   
+  text-shadow: 4px 2px 100px rgba(66, 68, 90, 1);
+  letter-spacing: 1px;
+  font-size: 35px;
 }
-#team-box{
-    background-color:black;
+.main-conatiner {
+  position: relative;
+  top: 100px;
+  padding: 5px 7%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 640px));
+  justify-content: center;
+}
+.main-conatiner section {
+  padding: 50px 10px;
+
+  border-radius: 10px;
+}
+#team-box {
+  background-color: black;
 }
 
-#team-box-header{
-    width: 100%;
-    text-align: left;
-    position: relative;
-    bottom: 40px;
+#team-box-header {
+  width: 100%;
+  text-align: left;
+  position: relative;
+  bottom: 40px;
+  color: #fff;
+  letter-spacing: 1px;
+  left: 10px;
+}
+#team-box-header p {
+  font-size: 15px;
+  animation: slowshowtext 1s;
+}
+.team-box-teamate-grid {
+  position: relative;
+  bottom: 20px;
+  padding: 5px 5%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 180px));
+}
+.teamate-box {
+  padding: 5px 5px;
+  margin: 10px;
+}
+.teammate-header {
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  width: 130px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+
+  text-align: center;
+}
+.teammate-header p {
+  color: black;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  position: relative;
+  top: 10px;
+}
+.teamate-descryption {
+  position: relative;
+  top: 10px;
+  text-align: center;
+  width: 200px;
+}
+.teamate-descryption p {
+  font-size: 14px;
+  text-align: center;
+  margin: 3px;
+  color: grey;
+  position: relative;
+  right: 30px;
+}
+#descryption-box p {
+  transition: 0.2s ease-in-out;
+  letter-spacing: 1px;
+  animation: showtext 3s;
+}
+#second-tile {
+  position: relative;
+  top: 30px;
+}
+
+.descryption-title {
+  font-size: 27px;
+  font-weight: 700;
+}
+.descryption-text {
+  color: grey;
+}
+.teammate-header:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.1, 1.1);
+}
+@keyframes showtext {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slowshowtext {
+  0% {
+    color: rgba(136, 165, 191, 0.48);
+  }
+  50% {
+    color: rgba(136, 165, 191, 0.5);
+  }
+  100% {
     color: #fff;
-    letter-spacing: 1px;
-    left: 10px;
-
-}
-#team-box-header p{
-    font-size: 15px;
-    animation: slowshowtext 1s;
-}
-.team-box-teamate-grid{
-    position: relative;
-    bottom: 20px;
-    padding: 5px 5%;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 180px));
-}
-.teamate-box{
-
-    padding: 5px 5px;
-    margin: 10px;
-}
-.teammate-header{
-    transition: .2s ease-in-out;
-    cursor: pointer;
-    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
-    width: 130px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #fff;
-
-    text-align: center;
-}
-.teammate-header p{
-    color: black;
-    font-weight: 600;
-    letter-spacing: 1px;
-    
-    position: relative;
-    top: 10px;
-}
-.teamate-descryption{
-    position: relative;
-    top: 10px;
-    text-align: center;
-    width: 200px;
-}
-.teamate-descryption p{
-    font-size: 14px;
-    text-align: center;
-    margin: 3px;
-    color: grey;
-    position: relative;
-    right: 30px;
-}
-#descryption-box p{
-    transition: .2s ease-in-out;
-    letter-spacing: 1px;
-    animation: showtext 3s   ;
-    
-}
-#second-tile{
-    position: relative;
-    top: 30px;
-}
-
-.descryption-title{
-    font-size: 27px;
-    font-weight: 700;
-}
-.descryption-text{
-    color: grey;
-
-}
-.teammate-header:hover{
-    transition: .2s ease-in-out;
-    transform: scale(1.1,1.1);
-}
-@keyframes showtext{
-    
-    0%{
-        transform: translateX(-100%);
-    } 50%{
-        transform: translateX(0%);
-    } 100%{
-        transform: translateX(0%);
-    }
-}
-@keyframes slowshowtext{
-    0%{
-        color: rgba(136, 165, 191, 0.48);
-    } 50%{
-        color: rgba(136, 165, 191, 0.50);
-    } 100%{
-        color: #fff;
-    }
+  }
 }
