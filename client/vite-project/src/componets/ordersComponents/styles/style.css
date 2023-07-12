@@ -3,12 +3,13 @@
   height: 100%;
 }
 .orders-wrapper {
-  margin: 6% auto;
   max-width: 400px;
   min-width: 40%;
   height: 590px;
-  margin-left: auto;
-  margin-right: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
