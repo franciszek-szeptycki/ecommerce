@@ -13,11 +13,8 @@ export default function AppLayout() {
 
   const [modalStateOptionsAccount, setModalStateOptionsAccount] = useState(false)
  
-  window.onload = () => {
- 
-   axios.get("/auth/login").then((res) => {console.log(res)})
-
-  }
+  //axios.get('/auth/login').then((res) => {console.log(res)})
+  
   return (
     <>
     <NavBar modalOptionsAccount={modalStateOptionsAccount} setModalOptionsAccount={setModalStateOptionsAccount} />

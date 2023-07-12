@@ -13,6 +13,7 @@ body {
   
   
   .form-conatiner{
+    overflow-y: scroll;
     background-color: #EEEEEE;
     position: fixed;
     top: 0;
@@ -27,7 +28,7 @@ body {
     margin:  3% auto 15% auto;
     max-width: 400px;
     min-width: 35%;
-    height: 570px;
+  
     
     background-color: #fff;
     border-radius: 10px;
@@ -52,26 +53,25 @@ body {
     color: black;
   }
   .media-form{
-    padding: 25px 35%;
+    padding: 15px 15%;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(170px, 43px));
     gap: 20px;
-    justify-content: center;
     position: relative;
-    top: 15px;
+    top: 20px;
+    margin: 5px;
   }
   .media-form button{
+    padding: 12px 10px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     transition: .2s ease-in-out;
-    padding: 15px 10px;
+   
     border-radius: 10px;
-    margin: 10px;
     border: 0px;
     font-weight: 600;
     letter-spacing: 1px;
     color: black;
-    
-    
   }
   .media-form button b{
     margin-right: 3%;
@@ -134,6 +134,8 @@ body {
     cursor:pointer;
     text-decoration: none;
     list-style-type: none;
+    padding: 2px;
+    padding-bottom: 6px;
   }
   .label-class{
     color: #fff;
