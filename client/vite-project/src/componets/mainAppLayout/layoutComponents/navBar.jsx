@@ -19,7 +19,7 @@ import { Route, Routes, useNavigate, Link } from "react-router-dom";
 export default function NavBar(props) {
   const [menuHandler, setmenuHandler] = useState(false);
 
-  console.log();
+  
 
   const navigate = useNavigate();
 
