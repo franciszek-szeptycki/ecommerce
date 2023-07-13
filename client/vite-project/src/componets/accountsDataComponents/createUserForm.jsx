@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function CreateUserAccountForm() {
   const [userName, setUserName] = useState("");
@@ -19,11 +20,22 @@ export default function CreateUserAccountForm() {
   const [email, setEmail] = useState("");
 
   const navigate = useNavigate();
+  //console.log(localStorage.getItem("Account Token"))
 
   const createNewAccount = () => {
     navigate("/appLayout");
 
     localStorage.setItem("User name", `${userName}`);
+    axios
+      .post("/auth/register/", {
+        username: userName,
+        password: password,
+        email: email,
+      })
+      .then((res) => {
+        localStorage.setItem("Account Token", `${res.data.token}`);
+        //console.log(localStorage.getItem("Account Token"))
+      });
   };
 
   const CheckUser = (e) => {

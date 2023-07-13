@@ -7,16 +7,28 @@ import {
   FaFacebookSquare,
   FaGoogle,
 } from "react-icons/fa";
-import { Link, Route, Routes } from "react-router-dom";
-
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import axios from "axios";
 export default function LoginForm() {
   const [userAccountName, setUserAccountName] = useState("");
   const [userAccountPassword, setUserAccountPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const CheckUser = async (e) => {
     e.preventDefault();
     console.log(userAccountPassword);
     console.log(userAccountName);
+    axios
+      .post("/auth/login/", {
+        username: userAccountName,
+        password: userAccountPassword,
+      })
+      .then((res) => {
+        localStorage.setItem("Account Token", `${res.data.token}`);
+      });
+
+    navigate("/appLayout");
   };
 
   return (

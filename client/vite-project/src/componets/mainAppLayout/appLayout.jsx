@@ -12,8 +12,9 @@ import Slider from "./layoutComponents/Slider";
 export default function AppLayout() {
 
   const [modalStateOptionsAccount, setModalStateOptionsAccount] = useState(false)
+  console.log(localStorage.getItem("Account Token"))
  
-  axios.get('/auth/login').then((res) => {console.log(res)})
+  
   
   return (
     <>
