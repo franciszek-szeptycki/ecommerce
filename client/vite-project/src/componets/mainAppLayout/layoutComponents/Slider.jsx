@@ -18,7 +18,7 @@ export default function Slider() {
       setSlide((slide -= 1));
     }
   };
-
+  console.log(slide);
   return (
     <>
       <div className="main-slider-container">
@@ -50,12 +50,18 @@ export default function Slider() {
 function Slide(props) {
   const slidesElements = slidesObjects.map((obj, idx) => {
     return (
-      <img
-        src={obj.src}
-        alt={obj.alt}
-        key={idx}
-        className={props.slide === idx ? "active-slide" : "hidden-slide"}
-      />
+      <>
+        <div
+          key={idx}
+          className={props.slide === idx ? "active-slide" : "hidden-slide"}
+        >
+          <header>
+            <h3>{obj.slideTitle}</h3>
+          </header>
+          <img src={obj.src} alt={obj.alt} />
+          <button>{obj.btnTitle}</button>
+        </div>
+      </>
     );
   });
 
