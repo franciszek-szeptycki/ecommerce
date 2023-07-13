@@ -44,3 +44,14 @@ def product_details(_, slug):
     data['images'] = img_serializer.data
 
     return Response(data)
+
+
+############
+#  slider  #
+############
+
+@api_view(['GET'])
+def slider_images(_):
+    images = SliderImage.objects.all()
+    serializer = SliderImageSerializer(images, many=True)
+    return Response(serializer.data)

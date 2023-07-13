@@ -34,3 +34,9 @@ class ProductImage(models.Model):
     def __str__(self):
         return f"{self.product.name} Image"
 
+
+class SliderImage(models.Model):
+    image = models.ImageField(upload_to="slider/", blank=True, null=True)
+
+    def __str__(self):
+        return self.image
