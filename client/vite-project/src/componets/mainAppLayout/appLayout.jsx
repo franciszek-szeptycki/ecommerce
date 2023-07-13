@@ -7,7 +7,7 @@ import ModalOptions from "./layoutComponents/modalOptions";
 //Import tools
 import axios from 'axios'
 import "./mainStyles/mainAppStyles.css";
-
+import Slider from "./layoutComponents/Slider";
 
 export default function AppLayout() {
 
@@ -19,6 +19,7 @@ export default function AppLayout() {
     <>
     <NavBar modalOptionsAccount={modalStateOptionsAccount} setModalOptionsAccount={setModalStateOptionsAccount} />
     <ModalOptions state={modalStateOptionsAccount} setState={setModalStateOptionsAccount}/>
+    <Slider/>
   
     </>
   );
