@@ -87,6 +87,43 @@ body{
     
     background-color: #fff;
 }
+.slider-header{
+    width: 100%;
+    position: relative;
+    top: 90px;
+    
+  
+    
+}
+
+.slider-header button{
+    transition: .2s ease-in-out;
+    letter-spacing: 1px;
+    width: 200px;
+    height: 50px;
+    border-radius: 0 5rem;
+    background: orange;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    color: #fff;
+    border: 0;
+    margin-left: 30%;
+   
+}
+.active-dot{
+    background-color: black;
+}
+.slider-header-item{
+    margin: 50px;
+}
+.slider-header h3{
+    letter-spacing: 1px;
+    font-size: 40px;
+    color: #fff;
+    margin-left: 30%;
+ 
+}
 .modal-container header{
     width: 100%;
     display: flex;
@@ -278,6 +315,11 @@ body{
     background-color: black;
     color: #fff;
 }
+.slider-header button:hover{
+    transition: .2s ease-in-out;
+    transform: scale(1.1,1.1);
+    background-color: gold;
+}
 .btn-close-menu:hover{
  transition: .2s ease-in-out;
  background-color: #3AA6B9;
@@ -286,6 +328,11 @@ body{
 #btn-toggle:hover{
     transition: .2s ease-in-out;
     color: #3AA6B9;
+}
+.btn-slider-box button:hover{
+    transition: .2s ease-in-out;
+    transform: scale(1.1,1.1);
+    background-color: gold;
 }
 .navigation ul li:hover{
     transition: .2s ease-in-out;

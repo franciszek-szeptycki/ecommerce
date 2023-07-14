@@ -10,19 +10,19 @@ const slidesObjects = [
     src: Icon,
     alt: "Test slider 1",
     btnTitle: 'check',
-    slideTitle: ''
+    slideTitle: 'Discounts'
   },
   {
     src: dataElements[1],
     alt: "Test slider 2 ",
     btnTitle: 'buy',
-    slideTitle: ''
+    slideTitle: 'New products'
   },
   {
     src: dataElements[2],
     alt: "Test slider 3",
-    btnTitle: 'news',
-    slideTitle: ''
+    btnTitle: 'News',
+    slideTitle: 'Just look'
   },
 ];
 

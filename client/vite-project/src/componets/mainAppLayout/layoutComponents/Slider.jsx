@@ -58,11 +58,12 @@ function Slide(props) {
           style={styles}
           
         >
-          <header>
-            <h3>{obj.slideTitle}</h3>
-          </header>
+          <div className="slider-header">
+            <h3 id="slider-title" className="slider-header-item"><b>{obj.slideTitle}</b></h3>
+            <button className="slider-header-item" >{obj.btnTitle}</button>
+          </div>
           
-          <button>{obj.btnTitle}</button>
+         
         </div>
       </>
     );
