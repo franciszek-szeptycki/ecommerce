@@ -35,7 +35,7 @@ export default function CreateUserAccountForm() {
         console.log(res);
       })
       .catch((error) => {
-        if (error.response.status === 401) {
+        if (error.response.status === 401 || 405) {
           setAccountCreatedErr(true);
         }
       });
