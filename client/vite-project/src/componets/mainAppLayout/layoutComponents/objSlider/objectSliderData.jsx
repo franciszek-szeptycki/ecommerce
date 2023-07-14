@@ -1,6 +1,8 @@
 const dataElements = [];
-
-const getDataElements = async () => {};
+import axios from "axios";
+const getDataElements =  () => {
+  //axios.get('/api/categories/').then(res => {console.log(res)})
+};
 
 getDataElements();
 

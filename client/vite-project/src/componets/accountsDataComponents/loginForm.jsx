@@ -32,7 +32,7 @@ export default function LoginForm() {
         console.log(res);
       })
       .catch((error) => {
-        if (error.response.status === 400) {
+        if (error.response.status === 400 || 405) {
           console.log("test");
           setLoginError(true);
         }
