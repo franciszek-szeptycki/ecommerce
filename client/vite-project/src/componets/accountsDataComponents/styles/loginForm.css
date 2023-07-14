@@ -17,6 +17,12 @@ body {
   height: 100vh;
 }
 
+.error-mode{
+  color: red;
+}
+.login-labels{
+  color: black;
+}
 .form-box {
   transform: translate(-50%, -50%);
   position: fixed;
@@ -102,7 +108,7 @@ body {
 .inputs-box label {
   font-size: 14px;
   letter-spacing: 1px;
-  color: black;
+  
   padding-left: 4px;
 }
 .inputs-box button {

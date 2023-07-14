@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //Imaga icon import
 import Icon from "./images/user.png";
 

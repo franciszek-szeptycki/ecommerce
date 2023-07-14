@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CreateUserAccountForm from "./createUserForm";
+
 import "./styles/loginForm.css";
 import {
   FaRegEnvelope,
@@ -7,15 +7,17 @@ import {
   FaFacebookSquare,
   FaGoogle,
 } from "react-icons/fa";
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+
 export default function LoginForm() {
   const [userAccountName, setUserAccountName] = useState("");
   const [userAccountPassword, setUserAccountPassword] = useState("");
+  const [loginError, setLoginError] = useState(false);
 
   const navigate = useNavigate();
 
-  const CheckUser = async (e) => {
+  const CheckUser = (e) => {
     e.preventDefault();
     console.log(userAccountPassword);
     console.log(userAccountName);
@@ -26,9 +28,15 @@ export default function LoginForm() {
       })
       .then((res) => {
         localStorage.setItem("Account Token", `${res.data.token}`);
+        navigate("/appLayout");
+        console.log(res);
+      })
+      .catch((error) => {
+        if (error.response.status === 400) {
+          console.log("test");
+          setLoginError(true);
+        }
       });
-
-    navigate("/appLayout");
   };
 
   return (
@@ -50,7 +58,9 @@ export default function LoginForm() {
           </section>
 
           <div className="inputs-box">
-            <label htmlFor="name">{<FaRegEnvelope />} Username</label>
+            <label style={{ color: loginError ? "red" : "" }} htmlFor="name">
+              {<FaRegEnvelope />} Username
+            </label>
             <input
               onChange={(e) => setUserAccountName(e.target.value)}
               className="form-item"
@@ -58,7 +68,12 @@ export default function LoginForm() {
               id="name"
               value={userAccountName}
             />
-            <label htmlFor="password">{<FaUnlock />} Password</label>
+            <label
+              style={{ color: loginError ? "red" : "" }}
+              htmlFor="password"
+            >
+              {<FaUnlock />} Password
+            </label>
             <input
               className="form-item"
               name="password"
@@ -80,9 +95,6 @@ export default function LoginForm() {
           </div>
         </form>
       </div>
-      <Routes>
-        <Route path="/register" element={<CreateUserAccountForm />}></Route>
-      </Routes>
     </>
   );
 }

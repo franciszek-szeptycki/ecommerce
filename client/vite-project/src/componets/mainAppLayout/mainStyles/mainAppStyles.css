@@ -21,6 +21,12 @@ body{
     display: flex;
     margin-left: 15%;
 }
+.btn-hidden{
+    display: none;
+}
+.btn-active{
+    display: block;
+}
 .navigation ul li{
     
     transition: .2s ease-in-out;

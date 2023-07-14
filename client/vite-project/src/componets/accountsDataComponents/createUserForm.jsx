@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import LoginForm from "./loginForm";
 import "./styles/createForm.css";
 
 import {
@@ -10,22 +9,20 @@ import {
   FaGoogle,
   FaUserCircle,
 } from "react-icons/fa";
-
-import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export default function CreateUserAccountForm() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
+  const [accountCreatedErr, setAccountCreatedErr] = useState(false);
 
   const navigate = useNavigate();
-  //console.log(localStorage.getItem("Account Token"))
 
   const createNewAccount = () => {
-    navigate("/appLayout");
-
     localStorage.setItem("User name", `${userName}`);
+
     axios
       .post("/auth/register/", {
         username: userName,
@@ -34,7 +31,13 @@ export default function CreateUserAccountForm() {
       })
       .then((res) => {
         localStorage.setItem("Account Token", `${res.data.token}`);
-        //console.log(localStorage.getItem("Account Token"))
+        navigate("/appLayout");
+        console.log(res);
+      })
+      .catch((error) => {
+        if (error.response.status === 401) {
+          setAccountCreatedErr(true);
+        }
       });
   };
 
@@ -44,7 +47,7 @@ export default function CreateUserAccountForm() {
     if (userName.length > 2 && password.length > 7 && email.length > 4) {
       createNewAccount();
     } else {
-      alert("Your name, password or email is to short !");
+      setAccountCreatedErr(true);
     }
   };
 
@@ -67,7 +70,10 @@ export default function CreateUserAccountForm() {
           </section>
 
           <div className={`inputs-box `}>
-            <label htmlFor="name">
+            <label
+              style={{ color: accountCreatedErr ? "red" : "" }}
+              htmlFor="name"
+            >
               {<FaUserCircle />}
               Username
             </label>
@@ -78,7 +84,12 @@ export default function CreateUserAccountForm() {
               name="name"
               id="name"
             />
-            <label htmlFor="email">{<FaRegEnvelope />} Email</label>
+            <label
+              style={{ color: accountCreatedErr ? "red" : "" }}
+              htmlFor="email"
+            >
+              {<FaRegEnvelope />} Email
+            </label>
             <input
               type="email"
               id="email"
@@ -88,7 +99,12 @@ export default function CreateUserAccountForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <label htmlFor="password">{<FaUnlock />} Password</label>
+            <label
+              style={{ color: accountCreatedErr ? "red" : "" }}
+              htmlFor="password"
+            >
+              {<FaUnlock />} Password
+            </label>
             <input
               className="form-item"
               name="password"
@@ -111,9 +127,6 @@ export default function CreateUserAccountForm() {
           </div>
         </form>
       </div>
-      <Routes>
-        <Route path="/login" element={<LoginForm />} />
-      </Routes>
     </>
   );
 }
