@@ -1,22 +1,20 @@
 import React, { useState } from "react";
 import { slidesObjects } from "./objSlider/objectSliderData";
+import {
+  FaArrowRight,
+  FaArrowLeft
+} from "react-icons/fa";
 export default function Slider() {
-  let [slide, setSlide] = useState(1);
+  let [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
-    if (slide === 3) {
-      setSlide(1);
-    } else {
-      setSlide((slide += 1));
-    }
+    
+    setSlide(slide === slidesObjects.length - 1 ? 0 : slide + 1)
   };
 
   const prevSlide = () => {
-    if (slide === 1) {
-      setSlide(3);
-    } else {
-      setSlide((slide -= 1));
-    }
+   
+    setSlide(slide === 0 ? slidesObjects.length - 1 : slide - 1)
   };
   console.log(slide);
   return (
@@ -24,10 +22,10 @@ export default function Slider() {
       <div className="main-slider-container">
         {<Slide slide={slide} />}
         <button id="left-arrow" className="arrow" onClick={() => nextSlide()}>
-          next
+          {<FaArrowLeft/>}
         </button>
         <button id="right-arrow" className="arrow" onClick={() => prevSlide()}>
-          prev
+        {<FaArrowRight/>}
         </button>
         <span className="dot-box">
           {slidesObjects.map((_, idx) => {
@@ -49,16 +47,21 @@ export default function Slider() {
 
 function Slide(props) {
   const slidesElements = slidesObjects.map((obj, idx) => {
+    const styles = {
+      backgroundImage: `url(${obj.src})`,
+    }
     return (
       <>
         <div
           key={idx}
-          className={props.slide === idx ? "active-slide" : "hidden-slide"}
+          className={props.slide === idx ? "slide" : "hidden-slide"}
+          style={styles}
+          
         >
           <header>
             <h3>{obj.slideTitle}</h3>
           </header>
-          <img src={obj.src} alt={obj.alt} />
+          
           <button>{obj.btnTitle}</button>
         </div>
       </>

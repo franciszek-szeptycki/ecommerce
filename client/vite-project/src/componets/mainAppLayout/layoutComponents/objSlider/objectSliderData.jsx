@@ -1,27 +1,26 @@
 const dataElements = [];
 import axios from "axios";
-const getDataElements =  () => {
-  //axios.get('/api/categories/').then(res => {console.log(res)})
-};
+import Icon from '../images/test.jpg'
 
-getDataElements();
+
+
 
 const slidesObjects = [
   {
-    src: dataElements[0],
-    alt: "First image slider",
+    src: Icon,
+    alt: "Test slider 1",
     btnTitle: 'check',
     slideTitle: ''
   },
   {
     src: dataElements[1],
-    alt: "Second image slider",
+    alt: "Test slider 2 ",
     btnTitle: 'buy',
     slideTitle: ''
   },
   {
     src: dataElements[2],
-    alt: "Third image slider",
+    alt: "Test slider 3",
     btnTitle: 'news',
     slideTitle: ''
   },
