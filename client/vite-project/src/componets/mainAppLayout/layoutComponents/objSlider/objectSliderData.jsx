@@ -5,7 +5,10 @@ import Test2 from '../images/test2.jpg'
 import Test3 from '../images/test3.jpg'
 
 
-
+const getDataSliders = () => {
+  axios.get('/api/slider/').then(res => console.log(res))
+}
+getDataSliders()
 
 const slidesObjects = [
   {

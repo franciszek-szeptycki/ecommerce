@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import NavBar from "./layoutComponents/navBar";
 import ModalOptions from "./layoutComponents/modalOptions";
 
+import ProductsLayout from "./layoutComponents/ProductsLayout/ProductsLayout";
 //Import tools
 import axios from 'axios'
 import "./mainStyles/mainAppStyles.css";
@@ -20,7 +21,9 @@ export default function AppLayout() {
     <>
     <NavBar modalOptionsAccount={modalStateOptionsAccount} setModalOptionsAccount={setModalStateOptionsAccount} />
     <ModalOptions state={modalStateOptionsAccount} setState={setModalStateOptionsAccount}/>
+   
     <Slider/>
+    <ProductsLayout/>
   
     </>
   );
