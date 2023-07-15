@@ -1,3 +1,7 @@
 .DS_Store
 .idea
 client/dist
+
+.env
+
+pipeline.txt
