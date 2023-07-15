@@ -16,6 +16,10 @@ export default function ProductNav(props) {
     return <li>{}</li>;
   });
 
+  //<div className="wrapper-category">
+  //<ul>{categorysElementsMap}</ul>
+  //</div>
+
   return (
     <>
       <section className="product-nav">
@@ -25,9 +29,7 @@ export default function ProductNav(props) {
         <button className="product-nav-item">
           <b>Categores {<FaSearch />}</b>
         </button>
-        <div className="wrapper-category">
-          <ul>{categorysElementsMap}</ul>
-        </div>
+        
       </section>
     </>
   );
