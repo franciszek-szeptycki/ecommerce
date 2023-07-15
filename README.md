@@ -4,6 +4,6 @@
 
 | Autors | Backend | Frontend |
 | :---: | :---: | :---: |
-| **GabrielJuniorDev** ([Gabrli](https://github.com/Gabrli))  | ![0%](https://progress-bar.dev/100)  | ![100%](https://progress-bar.dev/0)  |
-| **Franciszek Szeptycki** ([franciszek-szeptycki](https://github.com/franciszek-szeptycki))  | ![100%](https://progress-bar.dev/0)  | ![0%](https://progress-bar.dev/100)  |
+| **GabrielJuniorDev** ([Gabrli](https://github.com/Gabrli))  | ![100%](https://progress-bar.dev/100)  | ![0%](https://progress-bar.dev/0)  |
+| **Franciszek Szeptycki** ([franciszek-szeptycki](https://github.com/franciszek-szeptycki))  | ![0%](https://progress-bar.dev/0)  | ![100%](https://progress-bar.dev/100)  |
 
