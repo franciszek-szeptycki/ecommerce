@@ -80,19 +80,29 @@ INSTALLED_APPS += [
     'store'
 ]
 
-DATABASES = {
+if DEBUG:
+    DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'PORT': '5432',
-        'NAME': "root",
-        'USER': "root",
-        'PASSWORD': "root",
-        'HOST': os.getenv("HOST", "localhost"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'PORT': '5432',
+            'NAME': "root",
+            'USER': "root",
+            'PASSWORD': "root",
+            'HOST': os.getenv("HOST", "localhost"),
+        }
+    }
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 MEDIA_URL = "media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+APPEND_SLASH = True

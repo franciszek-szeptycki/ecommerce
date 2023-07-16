@@ -7,4 +7,5 @@ urlpatterns = [
     path("products/", product_list, name="product-list"),
     path("products/<slug:slug>/", product_details, name="product-detail"),
     path("slider/", slider_images, name="slider-images"),
+    path("about-us", about_us, name="about-us"),
 ]
