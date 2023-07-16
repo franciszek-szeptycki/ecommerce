@@ -28,3 +28,13 @@ class SliderImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = SliderImage
         fields = '__all__'
+
+class AboutUsDescriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AboutUsDescription
+        fields = '__all__'
+
+class AboutUsTeammateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AboutUsTeammate
+        fields = '__all__'

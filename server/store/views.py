@@ -55,3 +55,18 @@ def slider_images(_):
     images = SliderImage.objects.all()
     serializer = SliderImageSerializer(images, many=True)
     return Response(serializer.data)
+
+
+##############
+#  about us  #
+##############
+
+@api_view(['GET'])
+def about_us(_):
+    description = AboutUsDescription.objects.first()
+    serializer = AboutUsDescriptionSerializer(description, many=False)
+    teammates = AboutUsTeammate.objects.all()
+    teammates_serializer = AboutUsTeammateSerializer(teammates, many=True)
+    data = serializer.data
+    data['teammates'] = teammates_serializer.data
+    return Response(data)
