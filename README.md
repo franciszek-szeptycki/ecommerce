@@ -18,7 +18,7 @@
 
 ### Backend
 
--  <img width="227" alt="Zrzut ekranu 2023-07-16 o 09 25 38" src="https://seeklogo.com/images/D/django-logo-4C5ECF7036-seeklogo.com.png" title="Django-Rest-Framework" alt="Django-Rest-Framework" width="20" height="20" /> &nbsp;   Django Rest Framework
+-  <img alt="Zrzut ekranu 2023-07-16 o 09 25 38" src="https://seeklogo.com/images/D/django-logo-4C5ECF7036-seeklogo.com.png" title="Django-Rest-Framework" alt="Django-Rest-Framework" width="20" height="20" /> &nbsp;   Django Rest Framework
 - <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-plain-wordmark.svg"  title="postgresql" alt="POSTGREAQL" width="20" height="20"/>&nbsp;    PostgreSQL
 - <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-plain-wordmark.svg"  title="docker" alt="DOCKER" width="20" height="20"/>&nbsp;  Docker
--  <img src="https://pbs.twimg.com/profile_images/1293252199653371904/NUBlg7jw_400x400.jpg)https://pbs.twimg.com/profile_images/1293252199653371904/NUBlg7jw_400x400.jpg" title="nginx" alt="NGINX" width="20" height="20"/> &nbsp; Nginx
+-  <img src="https://avatars.githubusercontent.com/u/1412239?s=280&v=4" title="nginx" alt="NGINX" width="20" height="20"/> &nbsp; Nginx
