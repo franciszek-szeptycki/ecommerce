@@ -22,3 +22,11 @@
 - <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-plain-wordmark.svg"  title="postgresql" alt="POSTGREAQL" width="20" height="20"/>&nbsp;    PostgreSQL
 - <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-plain-wordmark.svg"  title="docker" alt="DOCKER" width="20" height="20"/>&nbsp;  Docker
 -  <img src="https://avatars.githubusercontent.com/u/1412239?s=280&v=4" title="nginx" alt="NGINX" width="20" height="20"/> &nbsp; Nginx
+---
+### Other tools
+<div>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-plain-wordmark.svg"  title="GIT" alt="GIT" width="20" height="20"/>&nbsp; 
+  
+</div>
+
+  
