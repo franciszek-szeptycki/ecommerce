@@ -25,7 +25,7 @@
 ---
 ### Other tools
 <div>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-plain-wordmark.svg"  title="GIT" alt="GIT" width="20" height="20"/>&nbsp; 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-plain-wordmark.svg"  title="GIT" alt="GIT" width="20" height="20"/>&nbsp; Git - version control system
   
 </div>
 
