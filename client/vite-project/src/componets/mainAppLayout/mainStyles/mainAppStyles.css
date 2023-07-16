@@ -204,7 +204,7 @@ body{
     transform: translateX(-100%);
     background-color: #fff;
     z-index: 1;
-    position: absolute;
+    position: fixed;
     top: 69px;
     left: 0px;
 }

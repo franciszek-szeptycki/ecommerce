@@ -16,10 +16,11 @@
     font-size: 32px;
     text-align: center;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 .product-nav button{
     letter-spacing: 1px;
-    
+    transition: .2s ease-in-out;
     
     border: 0px;
     background-color: black;
@@ -31,4 +32,8 @@
   padding: 10px 10px;
   
  
+}
+.product-nav button:hover{
+    transition: .2s ease-in-out;
+    background-color: orange;
 }
