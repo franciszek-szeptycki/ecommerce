@@ -1,12 +1,46 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 //Imaga icon import
 import Icon from "./images/user.png";
 
 //Tools import
 import { FaCheckCircle, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function ModalOptions(props) {
+  const [descryption, setDescryption] = useState(
+    " Hi, there! you can choose whether you want to log in or create account or not."
+  );
+  const [buttonLoginTitle, setButtonLoginTitle] = useState("Login");
+  const [buttonRegisterTitle, setButtonRegisterTitle] = useState("Register");
+
+  const navigate = useNavigate();
+
+  const checkLoginState = () => {
+    localStorage.getItem("Account Token")
+      ? clearUserData()
+      : navigate("/login");
+  };
+
+  const clearUserData = () => {
+    localStorage.clear();
+    setButtonLoginTitle("Login");
+  };
+
+  const resetButtonValue = () => {
+    setButtonLoginTitle("Login");
+    setButtonRegisterTitle("Register");
+  };
+
+  const changeButtonValue = () => {
+    setButtonLoginTitle("Log out");
+    setButtonRegisterTitle("New account");
+  };
+  useEffect(() => {
+    localStorage.getItem("Account Token")
+      ? changeButtonValue()
+      : resetButtonValue();
+  }, []);
+
   return (
     <>
       <div
@@ -23,17 +57,17 @@ export default function ModalOptions(props) {
             </button>
           </header>
           <section className="modal-text-descryption-container">
-            <p>
-              Hi, there! you can choose whether you want to log in or create an
-              account or not
-            </p>
+            <p>{descryption}</p>
           </section>
           <section className="options-container-modal">
-            <Link to="/login">
-              <button>Login {<FaCheckCircle />}</button>
-            </Link>
+            <button onClick={() => checkLoginState()}>
+              {buttonLoginTitle} {<FaCheckCircle />}
+            </button>
+
             <Link to="/register">
-              <button>Register {<FaCheckCircle />}</button>
+              <button>
+                {buttonRegisterTitle} {<FaCheckCircle />}
+              </button>
             </Link>
           </section>
         </div>

@@ -10,7 +10,7 @@ export default function ProductsLayout() {
     <>
       <ProductNav setMenuState={setMenuState} setCategory={setCategory} />
       <ProductsBoard category={category} />
-      <ProductsSideMenu menuState={menuState} setMenuState={setMenuState} />
+      <ProductsSideMenu category={category} setCategory={setCategory}  menuState={menuState} setMenuState={setMenuState} />
     </>
   );
 }

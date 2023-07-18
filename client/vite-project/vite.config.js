@@ -8,17 +8,18 @@ const PROXY = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
+  plugins: [react()],
 
-    build: {
-        outDir: '../dist',
-        emptyOutDir: true,
-    },
+  build: {
+    outDir: "../dist",
+    emptyOutDir: true,
+  },
 
-    server: {
-        proxy: {
-            '/api': PROXY,
-            '/auth': PROXY,
-        },
+  server: {
+    proxy: {
+      "/api": PROXY,
+      "/auth": PROXY,
+      "/media": PROXY,
     },
-})
+  },
+});

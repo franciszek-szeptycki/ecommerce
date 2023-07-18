@@ -6,23 +6,21 @@ import { FaTimes } from "react-icons/fa";
 export default function ProductsSideMenu(props) {
   const [categorys, setCategorys] = useState([]);
 
-   
-   const getDataCategories = () => {
-    console.log("test")
+  const getDataCategories = () => {
+    console.log("test");
 
-    axios.get('/api/categories/').then((res) => {
-     
-      setCategorys(res.data)
-      
-    })
-   } 
+    axios.get("/api/categories/").then((res) => {
+      setCategorys(res.data);
+      console.log(res.data)
+    });
+  };
 
- 
-
-   useEffect(() => {getDataCategories()}, [])
+  useEffect(() => {
+    getDataCategories();
+  }, []);
 
   const categorysElementsMap = categorys.map((element, idx) => {
-    return <Category element={element} />;
+    return <Category  setCategories={props.setCategory}  element={element} />;
   });
   return (
     <>
