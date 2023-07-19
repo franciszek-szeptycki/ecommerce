@@ -6,6 +6,7 @@ import CreateUserAccountForm from "./componets/accountsDataComponents/createUser
 import About from "./componets/mainAppLayout/OptionsPages/about";
 import AppLayout from "./componets/mainAppLayout/appLayout"
 import ModalOptions from "./componets/mainAppLayout/layoutComponents/modalOptions";
+import ProductItemModal from "./componets/mainAppLayout/layoutComponents/ProductsLayout/ProductItemModal";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/about" element={<About />} />
         <Route path="/modal" element={<ModalOptions/>}/>
+        <Route path="/productModal" element={<ProductItemModal/>}/>
       </Routes>
     </>
   );

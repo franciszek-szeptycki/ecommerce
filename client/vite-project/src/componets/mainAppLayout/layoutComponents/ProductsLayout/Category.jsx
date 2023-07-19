@@ -3,6 +3,7 @@ import React from "react";
 export default function Category(props){
     const choiceCategories = (slug) => {
         props.setCategories(`${slug}`)
+        console.log("test")
         
     }
     return(

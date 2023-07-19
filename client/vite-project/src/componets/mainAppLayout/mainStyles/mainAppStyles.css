@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: #EEE
+    background: #fff
     
 }
 .navigation{
@@ -28,6 +28,8 @@ body{
 .btn-active{
     display: block;
 }
+
+
 .navigation ul li{
     
     transition: .2s ease-in-out;
@@ -82,10 +84,12 @@ body{
     padding: 20px;
     height: 500px;
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 8% auto;
+   
     
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    top: 50%;
     background-color: #fff;
 }
 .slider-header{

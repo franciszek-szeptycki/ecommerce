@@ -1,18 +1,18 @@
 .product-nav{
-    background-color: #fff;
+    background-color:#F2EAD3;
   
-    padding: 15px 25%;
+    
     display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
     grid-template-columns: repeat(auto-fit, minmax(270px, 30px));
-    
+    padding: 5px;
     position: relative;
     top: 672px;
 }
 .product-nav p{
-   
+    
     font-size: 32px;
     text-align: center;
     letter-spacing: 1px;
@@ -21,7 +21,7 @@
 .product-nav button{
     letter-spacing: 1px;
     transition: .2s ease-in-out;
-    
+    padding: 15px;
     border: 0px;
     background-color: black;
     color: #fff;
@@ -35,5 +35,6 @@
 }
 .product-nav button:hover{
     transition: .2s ease-in-out;
-    background-color: orange;
+    background-color: white;
+    color: black;
 }
