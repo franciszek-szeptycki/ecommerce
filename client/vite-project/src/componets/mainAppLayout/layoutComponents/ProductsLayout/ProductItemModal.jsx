@@ -25,7 +25,7 @@ export default function ProductItemModal(props) {
             id="info-clicked-product-section"
             className="modal-product-item-section"
           >
-            <button className="btn-modal-item-hidden">{<FaTimes />}</button>
+            <button onClick={() => props.setProductModal(false)} className="btn-modal-item-hidden">{<FaTimes />}</button>
             <header>
               <h5>
                 <b>{props.itemName}</b>
