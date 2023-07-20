@@ -1,0 +1,121 @@
+.product-modal-box-item {
+  padding: 5px 7%;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(270px, 570px));
+  justify-content: center;
+  align-items: center;
+}
+.descryption-btn-show-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 10px;
+}
+.descryption-btn-show-box button {
+  background: transparent;
+  transition: 0.2s ease-in-out;
+  border: 1px solid;
+  text-align: center;
+  padding: 7px;
+  font-size: 15px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: min-content;
+}
+
+.price-clicked-product {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  bottom: 100px;
+}
+.price-clicked-product p {
+  letter-spacing: 1px;
+  color: grey;
+  font-size: 18px;
+}
+.modal-product-item-section {
+  padding: 100px 10px;
+  background: #fff;
+}
+#info-clicked-product-section {
+  height: 215px;
+}
+#info-clicked-product-section header {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 70px;
+}
+#info-clicked-product-section header h5 {
+  letter-spacing: 1px;
+
+  font-size: 27px;
+  font-weight: 700;
+  border-bottom: 2px solid;
+  line-height: 50px;
+  position: relative;
+  bottom: 40px;
+}
+.buttons-product-section {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 60px;
+}
+.buttons-product-section button {
+  transition: 0.2s ease-in-out;
+  width: 70%;
+  padding: 14px;
+  background-color: black;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+.btn-modal-item-hidden {
+  transition: 0.2s ease-in-out;
+  margin-left: 90%;
+  position: relative;
+  bottom: 90px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  background: transparent;
+  border: 0;
+}
+#modal-product-item-img {
+  height: 215px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+}
+.btn-modal-item-hidden:hover {
+  transition: 0.2s ease-in-out;
+  color: #3aa6b9;
+}
+.buttons-product-section button:hover {
+  transition: 0.2s ease-in-out;
+  background-color: #eeee;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.descryption-btn-show-box button:hover {
+  transition: 0.2s ease-in-out;
+  background-color: black;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+}
+@media screen and (max-width: 502px) {
+  #info-clicked-product-section {
+    height: 290px;
+  }
+}

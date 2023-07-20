@@ -1,8 +1,8 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: #fff
-    
+    background: #fff;
+   
 }
 .navigation{
     width: 100%;
@@ -163,6 +163,7 @@ body{
     position: relative;
     top: 26px;
 }
+
 .modal-text-descryption-container p {
     width: 200px;
     text-align: center;
