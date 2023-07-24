@@ -33,7 +33,7 @@ export default function AppLayout() {
         modalOptionsAccount={modalStateOptionsAccount}
         setModalOptionsAccount={setModalStateOptionsAccount}
       />
-      <Footer/>
+     
     </>
   );
 }
