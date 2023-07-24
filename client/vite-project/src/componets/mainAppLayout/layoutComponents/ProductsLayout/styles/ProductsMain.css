@@ -7,7 +7,7 @@
   width: 350px;
   height: 100vh;
   transform: translateX(-100%);
-  background-color: #fff;
+  background-color: #F5F5F5;
   z-index: 1;
   position: fixed;
   top: 69px;
@@ -75,8 +75,7 @@
   transform: scale(1.1, 1.1);
 }
 .products-main-container {
-  position: relative;
-  top: 700px;
+ 
   
   padding: 25px 20%;
   display: none;
@@ -88,11 +87,8 @@
 }
 .active-main-product{
   
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+ position: relative;
+ top: 700px;
 }
 
 .product-modal-item {
@@ -136,10 +132,12 @@
   color: gray;
   letter-spacing: 1px;
   text-align: center;
+  margin-top: 3%;
 }
 .products-item-title {
   text-align: center;
   letter-spacing: 1px;
+  margin-top: 2%;
 }
 .products-header {
   width: 100%;

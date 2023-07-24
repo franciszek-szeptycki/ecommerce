@@ -26,7 +26,7 @@ export default function ProductsBoard(props) {
           <b>{props.category}</b>
         </h3>
       </header>
-      <div className="products-main-container">{productsElementsMap}</div>
+      <div className={`products-main-container ${props.category ? 'active-main-product' : ''}`}>{productsElementsMap}</div>
     </>
   );
 }
