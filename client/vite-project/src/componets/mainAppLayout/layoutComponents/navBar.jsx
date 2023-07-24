@@ -9,17 +9,14 @@ import {
   FaBars,
   FaRegLightbulb,
   FaUserCircle,
-  
   FaShoppingCart,
-  FaInstagram
+  FaInstagram,
 } from "react-icons/fa";
 
 import { Route, Routes, useNavigate, Link } from "react-router-dom";
 
 export default function NavBar(props) {
   const [menuHandler, setmenuHandler] = useState(false);
-
-  
 
   const navigate = useNavigate();
 
@@ -34,10 +31,16 @@ export default function NavBar(props) {
 
         <ul>
           <Link className="router-link" to="/about">
-            <li>{<FaUserCircle />} <b>About</b></li>
+            <li>
+              {<FaUserCircle />} <b>About</b>
+            </li>
           </Link>
-          <li>{<FaInstagram />} <b>Find us</b></li>
-          <li>{<FaRegLightbulb />} <b>Help</b></li>
+          <li>
+            {<FaInstagram />} <b>Find us</b>
+          </li>
+          <li>
+            {<FaRegLightbulb />} <b>Help</b>
+          </li>
         </ul>
 
         <button className="btn-contact-nav">Contact</button>
@@ -65,10 +68,16 @@ export default function NavBar(props) {
         </header>
         <ul>
           <Link className="router-link" to="/about">
-          <li>{<FaUserCircle />} <b>About</b></li>
+            <li>
+              {<FaUserCircle />} <b>About</b>
+            </li>
           </Link>
-          <li>{<FaInstagram />} <b>find us</b></li>
-          <li>{<FaRegLightbulb />} <b>Help</b></li>
+          <li>
+            {<FaInstagram />} <b>find us</b>
+          </li>
+          <li>
+            {<FaRegLightbulb />} <b>Help</b>
+          </li>
           <li
             className="options-list-item"
             onClick={() => props.setModalOptionsAccount(true)}
