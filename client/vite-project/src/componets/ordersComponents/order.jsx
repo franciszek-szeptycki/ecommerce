@@ -1,9 +1,15 @@
 import React from "react";
+//Import object products
+import { productsList } from "../mainAppLayout/layoutComponents/objProducts.jsx";
+import ProductBagItem from "./productBagItem.jsx";
 //Import tools
 import "./styles/style.css";
 import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 export default function OrderUser() {
+  const mapElements = productsList.map((element) => {
+    return <ProductBagItem element={element} />;
+  });
   return (
     <>
       <div className="orders-container">
@@ -26,10 +32,9 @@ export default function OrderUser() {
               <p id="text-check-order">All products are available</p>
             </div>
           </section>
-          <section
-            id="list-box-orders"
-            className="info-container-item"
-          ></section>
+          <section id="list-box-orders" className="info-container-item">
+            {mapElements}
+          </section>
         </main>
       </div>
     </>

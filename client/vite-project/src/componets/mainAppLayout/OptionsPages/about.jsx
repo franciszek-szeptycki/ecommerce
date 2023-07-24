@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./styles/about.css";
 export default function About() {
+  const getDataTeammetePersone = () => {};
+
+  useEffect(() => {
+    getDataTeammetePersone();
+  }, []);
   return (
     <>
       <header>

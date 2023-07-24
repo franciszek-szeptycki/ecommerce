@@ -1,10 +1,11 @@
 .product-modal-box-item {
   padding: 5px 7%;
   display: grid;
-
+ 
   grid-template-columns: repeat(auto-fit, minmax(270px, 570px));
   justify-content: center;
   align-items: center;
+  
 }
 .descryption-btn-show-box {
   width: 100%;

@@ -23,6 +23,7 @@ export default function ProductsItem(props) {
           itemPrice={props.element.price}
           itemImage={props.element.image}
           itemDescryption={props.element.descryption}
+          
           productModal={productModal}
           setProductModal={setProductModal}
         />
