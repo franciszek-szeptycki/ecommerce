@@ -60,7 +60,7 @@ function Slide(props) {
         >
           <div className="slider-header">
             <h3 id="slider-title" className="slider-header-item"><b>{obj.slideTitle}</b></h3>
-            <button className="slider-header-item" >{obj.btnTitle}</button>
+            <p className="slider-header-item" ><b>{obj.btnTitle}</b></p>
           </div>
           
          

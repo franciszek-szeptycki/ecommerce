@@ -8,20 +8,23 @@ export default function ProductsBoard(props) {
   const getCategories = () => {
     axios.get(`api/categories/${props.category}`, {}).then((res) => {
       setProducts(res.data);
+      
     });
   };
 
+  
+
   useEffect(() => {
-    props.category ? getCategories() : "";
+    props.category ? getCategories() : '';
   }, [props.category]);
-  console.log(products);
+
 
   const productsElementsMap = products.map((element) => {
     return <ProductsItem element={element} />;
   });
   return (
     <>
-      <header className="products-header ">
+      <header className={`products-header ${props.category ? 'product-header-active' : ''}`}>
         <h3>
           <b>{props.category}</b>
         </h3>

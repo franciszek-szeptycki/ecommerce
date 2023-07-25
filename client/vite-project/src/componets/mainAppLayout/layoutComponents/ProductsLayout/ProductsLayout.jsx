@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProductNav from "./ProductNavBar";
 import ProductsBoard from "./ProductsBoard";
 import ProductsSideMenu from "./ProductsSideMenu";
@@ -6,10 +6,12 @@ import ProductsSideMenu from "./ProductsSideMenu";
 export default function ProductsLayout() {
   const [category, setCategory] = useState("");
   const [menuState, setMenuState] = useState(false);
+
+  
   return (
     <>
       <ProductNav setMenuState={setMenuState} setCategory={setCategory} />
-      <ProductsBoard  category={category} />
+      <ProductsBoard setCategory={setCategory}  category={category} />
       <ProductsSideMenu category={category} setCategory={setCategory}  menuState={menuState} setMenuState={setMenuState} />
     </>
   );

@@ -1,6 +1,6 @@
 
 .product-nav{
-    background-color:#F5F5F5;
+    background-color:rgba(0,0,0,0.9);
    
     
     display: grid;
@@ -19,6 +19,7 @@
     text-align: center;
     letter-spacing: 1px;
     font-weight: 700;
+    color: grey;
 }
 .product-nav button{
     letter-spacing: 1px;
@@ -26,8 +27,8 @@
     padding: 11px;
     font-size: 14px;
     border: 0px;
-    background-color: #101010;
-    color: #fff;
+    background-color: #FFFF;
+    color: grey;
     border-radius: 3px;
   
 }
@@ -38,6 +39,6 @@
 }
 .product-nav button:hover{
     transition: .2s ease-in-out;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: #fff;
 }

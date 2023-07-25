@@ -13,7 +13,7 @@ export default function ProductNav(props) {
           <b>Products</b>
         </p>
         <button onClick={() => props.setMenuState(true)} className="product-nav-item">
-          <b>Categories {<FaSearch />}</b>
+          <b>Search {<FaSearch />}</b>
         </button>
         
         

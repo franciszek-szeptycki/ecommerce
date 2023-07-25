@@ -29,7 +29,9 @@ body{
     display: block;
 }
 
-
+.active-dot{
+    background-color: #fff;
+}
 .navigation ul li{
     
     transition: .2s ease-in-out;
@@ -101,39 +103,41 @@ body{
 }
 .slider-header{
     width: 100%;
+    text-align: center;
     position: relative;
-    top: 90px;
+    top: 120px;
     
   
     
 }
 
-.slider-header button{
+.slider-header p{
+    text-align: center;
     transition: .2s ease-in-out;
     letter-spacing: 1px;
-    width: 200px;
-    height: 50px;
+    background: transparent;
     border-radius: 0 5rem;
-    background: orange;
+   
     font-weight: 600;
-    font-size: 20px;
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    color: #fff;
+    font-size: 24px;
+    text-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    color: brown;
     border: 0;
-    margin-left: 30%;
+    text-shadow: #101010 1px 0 10px;
+    
    
 }
-.active-dot{
-    background-color: black;
-}
+
 .slider-header-item{
-    margin: 50px;
+   margin: 50px;
 }
 .slider-header h3{
     letter-spacing: 1px;
-    font-size: 40px;
+    font-size: 49px;
     color: #fff;
-    margin-left: 30%;
+    text-shadow: #101010 1px 0 10px;
+
+    
  
 }
 .modal-container header{
@@ -293,20 +297,26 @@ body{
     right: 1rem;
 }
 .dot-box{
+    width: 100%;
     display: flex;
+    justify-content: left;
     position: absolute;
     bottom: 1rem;
+   
 }
 .dot{
-    background-color: white;
-  height: 13px;
-  width: 13px;
+    background-color: #fff;
+  height: 16px;
+  width: 16px;
   border-radius: 100%;
-  border: none;
+  border: 1px solid #fff;
   outline: none;
   box-shadow: 0px 0px 5px #555;
-  margin: 0 0.2rem;
+  margin: 0 0.4rem;
   cursor: pointer;
+  position: relative;
+  left: 5%;
+ 
 }
 #btn-toggle{
     transition: .2s ease-in-out;

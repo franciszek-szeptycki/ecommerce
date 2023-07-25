@@ -14,20 +14,20 @@ const slidesObjects = [
   {
     src: Test1,
     alt: "Test slider 1",
-    btnTitle: 'check',
-    slideTitle: 'Discounts'
+    btnTitle: 'Take advantage now',
+    slideTitle: 'Cool discounts'
   },
   {
     src: Test2,
     alt: "Test slider 2 ",
-    btnTitle: 'buy',
+    btnTitle: 'Perfectly refined',
     slideTitle: 'New products'
   },
   {
     src: Test3,
     alt: "Test slider 3",
-    btnTitle: 'News',
-    slideTitle: 'Just look'
+    btnTitle: 'Cool new events',
+    slideTitle: 'Events'
   },
 ];
 

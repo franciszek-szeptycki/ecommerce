@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import NavBar from "./layoutComponents/navBar";
 import ModalOptions from "./layoutComponents/modalOptions";
 import Footer from "./layoutComponents/Footer";
-
+import Slider from './layoutComponents/Slider'
 import ProductsLayout from "./layoutComponents/ProductsLayout/ProductsLayout";
+import TestPlace from "./layoutComponents/test";
 //Import tools
 
 import "./mainStyles/mainAppStyles.css";
 
-import Slider from "./layoutComponents/Slider";
 
 export default function AppLayout() {
   const [modalStateOptionsAccount, setModalStateOptionsAccount] =
@@ -29,10 +29,15 @@ export default function AppLayout() {
       />
 
       <Slider />
+
+      <TestPlace/>
+
+      
       <ProductsLayout
         modalOptionsAccount={modalStateOptionsAccount}
         setModalOptionsAccount={setModalStateOptionsAccount}
       />
+      
      
     </>
   );
