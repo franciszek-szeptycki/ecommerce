@@ -13,6 +13,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
+import '../mainStyles/nav.css'
+
 import { Route, Routes, useNavigate, Link } from "react-router-dom";
 
 export default function NavBar(props) {

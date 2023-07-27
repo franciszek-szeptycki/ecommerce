@@ -13,9 +13,11 @@ header {
   font-size: 35px;
 }
 .main-conatiner {
-  position: relative;
-  top: 100px;
-  padding: 5px 7%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2px 0%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 640px));
   justify-content: center;

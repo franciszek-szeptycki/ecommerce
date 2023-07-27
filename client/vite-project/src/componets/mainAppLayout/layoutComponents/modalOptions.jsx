@@ -5,6 +5,7 @@ import Icon from "./images/user.png";
 //Tools import
 import { FaCheckCircle, FaTimes } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import '../mainStyles/modalOptions.css'
 
 export default function ModalOptions(props) {
   const [descryption, setDescryption] = useState(

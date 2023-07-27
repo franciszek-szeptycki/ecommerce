@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { slidesObjects } from "./objSlider/objectSliderData";
+import '../mainStyles/slider.css'
 import {
   FaArrowRight,
   FaArrowLeft

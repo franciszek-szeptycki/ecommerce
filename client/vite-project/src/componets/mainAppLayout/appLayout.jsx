@@ -3,14 +3,12 @@ import React, { useState } from "react";
 //Import components
 import NavBar from "./layoutComponents/navBar";
 import ModalOptions from "./layoutComponents/modalOptions";
-import Footer from "./layoutComponents/Footer";
-import Slider from './layoutComponents/Slider'
+import Slider from "./layoutComponents/Slider";
 import ProductsLayout from "./layoutComponents/ProductsLayout/ProductsLayout";
-import TestPlace from "./layoutComponents/test";
+import TestPlace from "./layoutComponents/Sections";
 //Import tools
 
-import "./mainStyles/mainAppStyles.css";
-
+import "./mainStyles/index.css";
 
 export default function AppLayout() {
   const [modalStateOptionsAccount, setModalStateOptionsAccount] =
@@ -30,15 +28,12 @@ export default function AppLayout() {
 
       <Slider />
 
-      <TestPlace/>
+      <TestPlace />
 
-      
       <ProductsLayout
         modalOptionsAccount={modalStateOptionsAccount}
         setModalOptionsAccount={setModalStateOptionsAccount}
       />
-      
-     
     </>
   );
 }

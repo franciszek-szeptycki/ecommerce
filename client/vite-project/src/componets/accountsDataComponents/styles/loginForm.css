@@ -30,6 +30,7 @@ body {
   left: 50%;
   max-width: 400px;
   min-width: 30%;
+  height: 430px;
 
   background-color: #fff;
   border-radius: 10px;
@@ -47,7 +48,7 @@ body {
 }
 .form-box header h2 {
   letter-spacing: 2px;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   color: black;
 }
@@ -183,4 +184,9 @@ body {
 #form-text:hover {
   transition: 0.2s ease-in-out;
   color: royalblue;
+}
+@media screen and (max-width: 1669px) {
+  .form-box{
+    height: 475px;
+  }
 }
